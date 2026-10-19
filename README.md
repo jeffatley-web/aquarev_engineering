@@ -8,20 +8,21 @@ under `#aren`.
 
 ## Page outline
 
-1. Hero + Pump Room Specifications Guide (video placeholder until the video is published)
-2. Why you're here
-3. What we need (three things per pool, plus walkthrough video and three notes) + field checklist
-4. How to capture it (five steps, same order as the video and the portal)
-5. How to send it (Engineer Portal, or a direct email summary)
-6. References (/specifications, /drawings, /data)
-7. FAQ + contact band
+Deliberately short, like Step 1 (Briefing) of the Engineer Portal. Detailed instruction lives
+in the portal's help, the video and the Specifications pages, not here.
+
+1. Welcome heading + one-sentence lede
+2. Pump Room Specifications Guide (video placeholder until the video is published)
+3. What we need from you: four cards (walk the pump room, confirm each pool, size the returns, send it)
+4. Ready to start: Engineer Portal (primary), Email AquaRev, phone
+5. Reference links: /specifications, /drawings, /data
 
 ## Files
 
 | File | Role |
 |---|---|
 | `AquaRev_Engineering_Page.html` | Master. The only file you edit. Opens on its own in a browser. |
-| `img/` | Poster frame (from the v6 video) and three compressed pump-room photos. |
+| `img/` | Video poster frame (from the v6 video). |
 | `build.sh` | Generates everything below from the master. |
 | `engineering.css`, `engineering.js` | Generated. Hosted on GitHub Pages. |
 | `webflow-embed-engineering.html` | Generated. Paste into the Webflow Embed on `/engineering`. |
@@ -29,11 +30,9 @@ under `#aren`.
 
 ## Turning the video on
 
-In the master's `<script>`, set `GUIDE.youtubeId` to the YouTube id. Optionally fill
-`GUIDE.chapters` with six start times in seconds (walkthrough, find the return, size it,
-count & label, extras, send it); the chapter buttons then jump into the video. Rebuild and push.
-With no id set, the page shows "Video publishing soon" and the chapter buttons scroll to
-the written steps instead.
+In the master's `<script>`, set `GUIDE.youtubeId` to the YouTube id, rebuild and push. The
+button then reads "Watch the guide" and plays the video in place. With no id set, it reads
+"Video publishing soon".
 
 ## GitHub Pages
 

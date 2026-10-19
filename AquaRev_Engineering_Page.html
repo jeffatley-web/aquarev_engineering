@@ -3,24 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Engineers Start Here</title>
+<title>Engineering &amp; Contractors</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
 --paper:#FFFFFF;
 --panel:#F6F9FC;
---panel-2:#EEF4FA;
 --ink:#0E1E3A;
 --text:#22304A;
 --muted:#5C6B82;
---accent:#1B7FC4;
---accent-ink:#0F5C91;
 --aqua:#0E9FC2;
+--aqua-ink:#0F5C91;
 --wash:#EAF3FA;
 --rule:#CBD6E2;
 --rule-soft:#E3EAF2;
---ok:#2C7A4B;
---ok-wash:#E6F3EB;
 --shadow:0 1px 2px rgba(14,30,58,.06),0 8px 24px rgba(14,30,58,.06);
 --display:"Archivo",system-ui,"Helvetica Neue",Arial,sans-serif;
 --body:"Source Sans 3","Source Sans Pro",system-ui,Arial,sans-serif;
@@ -29,742 +25,147 @@
 :root[data-theme="dark"]{
 --paper:#0F1727;
 --panel:#131D30;
---panel-2:#16233A;
 --ink:#F1F5FA;
 --text:#D5DEEA;
 --muted:#93A2B8;
---accent:#5FB0EA;
---accent-ink:#8CC8F2;
 --aqua:#4CC9E6;
+--aqua-ink:#8CDCEF;
 --wash:#16233A;
 --rule:#2E3D55;
 --rule-soft:#22304A;
---ok:#7BD19B;
---ok-wash:#173325;
 --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.28);
 }
 body{margin:0;background:var(--paper);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 *,*::before,*::after{box-sizing:border-box}
-.page{max-width:1160px;margin:0 auto;padding:0 32px 96px}
-:where(.page) :where(h1,h2,h3,h4,p,ul,ol,li,figure,table,caption){margin:0;padding:0}
-.page a{color:var(--accent-ink);text-decoration:none}
-.page img{display:block;max-width:100%;height:auto;border:0}
+:where(.page) :where(h1,h2,h3,p,ol,li){margin:0;padding:0}
 :where(.page) button{font:inherit;color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:80px 32px 96px}
+.page a{text-decoration:none}
+.page img{display:block;max-width:100%;height:auto;border:0}
 .page svg{flex:none}
-.en-kicker{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin-bottom:14px}
-.en-kicker b{font-weight:500;color:var(--muted)}
-.en-h2{font-family:var(--display);font-stretch:82%;font-weight:750;font-size:clamp(30px,3.6vw,44px);line-height:1.04;letter-spacing:-.005em;color:var(--ink)}
-.en-h2 em{font-style:normal;color:var(--aqua)}
-.en-lede{font-size:19px;line-height:1.5;color:var(--muted);max-width:640px;margin-top:14px}
-.en-sec{padding-top:96px;scroll-margin-top:calc(var(--aren-sticky-top,0px) + 72px)}
-.en-sec-hd{margin-bottom:40px}
-.en-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 24px;border-radius:10px;font-family:var(--body);font-size:17px;font-weight:700;line-height:1;letter-spacing:.005em;cursor:pointer;border:1px solid transparent;transition:background .15s,border-color .15s,color .15s,transform .15s;white-space:nowrap}
-.en-btn svg{width:18px;height:18px}
-.page a.en-btn-primary,.en-btn-primary{background:var(--aqua);color:#04121F;border-color:var(--aqua)}
-.page a.en-btn-primary:hover,.en-btn-primary:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
-.page a.en-btn-ghost,.en-btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
-.page a.en-btn-ghost:hover,.en-btn-ghost:hover{border-color:var(--aqua);color:var(--aqua)}
-.en-btn-sm{height:42px;padding:0 16px;font-size:15px;border-radius:8px}
-.en-hero{padding-top:72px;display:grid;grid-template-columns:minmax(0,1fr);gap:0}
-.en-hero-eyebrow{display:inline-flex;align-items:center;gap:10px;align-self:start;justify-self:start;padding:7px 14px 7px 10px;border:1px solid var(--rule);border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
-.en-hero-eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 4px rgba(76,201,230,.18)}
-.en-hero-row{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:48px;align-items:end}
-.en-h1{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(40px,5.6vw,70px);line-height:.98;letter-spacing:-.01em;color:var(--ink)}
+.en-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 10px;border:1px solid var(--rule);border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.en-eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 4px rgba(76,201,230,.18)}
+.en-h1{margin-top:24px;max-width:900px;font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(38px,5.2vw,64px);line-height:1;letter-spacing:-.01em;color:var(--ink)}
 .en-h1 span{display:block;color:var(--aqua)}
-.en-hero-lede{font-size:19px;line-height:1.55;color:var(--text);margin-bottom:26px}
-.en-hero-lede b{color:var(--ink);font-weight:600}
-.en-hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.en-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border-top:1px solid var(--rule-soft);border-bottom:1px solid var(--rule-soft)}
-.en-fact{display:flex;align-items:center;gap:14px;padding:18px 20px 18px 0;font-size:15.5px;line-height:1.35;color:var(--text)}
-.en-fact + .en-fact{padding-left:20px;border-left:1px solid var(--rule-soft)}
-.en-fact svg{width:22px;height:22px;color:var(--aqua)}
-.en-fact b{display:block;color:var(--ink);font-weight:600}
-.en-video-wrap{margin-top:44px;scroll-margin-top:24px}
-.en-video{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#06101E;border:1px solid var(--rule);box-shadow:var(--shadow)}
+.en-lede{margin-top:20px;max-width:640px;font-size:19px;line-height:1.55;color:var(--text)}
+.en-video{position:relative;margin-top:44px;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#06101E;border:1px solid var(--rule);box-shadow:var(--shadow)}
 .en-video img,.en-video iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
-.en-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,24,0) 55%,rgba(4,12,24,.78) 100%);pointer-events:none}
-.en-play{position:absolute;left:24px;bottom:22px;display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 20px 0 8px;border-radius:999px;border:0;background:var(--aqua);color:#04121F;font-family:var(--body);font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 12px 32px rgba(0,0,0,.45);transition:transform .15s,background .15s}
+.en-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,24,0) 60%,rgba(4,12,24,.7) 100%);pointer-events:none}
+.en-play{position:absolute;left:24px;bottom:22px;display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 20px 0 8px;border-radius:999px;border:0;background:var(--aqua);color:#04121F;font-family:var(--body);font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 12px 32px rgba(0,0,0,.45);transition:transform .15s}
+.en-play:hover{transform:translateY(-1px)}
 .en-play-ico{width:38px;height:38px;border-radius:50%;background:#04121F;color:var(--aqua);display:flex;align-items:center;justify-content:center}
 .en-play-ico svg{width:15px;height:15px;margin-left:3px}
 .en-play-time{font-family:var(--mono);font-size:13px;font-weight:500;opacity:.7}
-.en-play:hover{transform:translateY(-1px)}
 .en-video.is-pending .en-play{background:rgba(6,16,30,.82);color:#E3EAF2;border:1px solid rgba(241,245,250,.22);cursor:default}
 .en-video.is-pending .en-play:hover{transform:none}
 .en-video.is-pending .en-play-ico{background:rgba(229,179,92,.16);color:#E5B35C}
 .en-play-live{display:none}
 .en-video:not(.is-pending) .en-play-live{display:inline}
 .en-video:not(.is-pending) .en-play-soon{display:none}
-.en-chapters{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:14px}
-.en-chapter{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:12px 14px;border-radius:10px;border:1px solid var(--rule-soft);background:var(--panel);text-align:left;font-size:14.5px;font-weight:600;line-height:1.25;color:var(--ink);cursor:default;transition:border-color .15s,background .15s}
-.en-chapter span{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;color:var(--muted)}
-.en-chapters.is-live .en-chapter{cursor:pointer}
-.en-chapters.is-live .en-chapter:hover{border-color:var(--aqua);background:var(--panel-2)}
-.en-video-note{margin-top:12px;font-size:14.5px;color:var(--muted)}
-.en-nav{position:sticky;top:var(--aren-sticky-top,0px);z-index:5;margin:72px -32px 0;padding:0 32px;background:var(--paper);border-bottom:1px solid var(--rule-soft)}
-.en-nav-in{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
-.en-nav-in::-webkit-scrollbar{display:none}
-.page a.en-nav-a{position:relative;flex:none;padding:18px 14px;font-size:15px;font-weight:600;color:var(--muted);transition:color .15s}
-.page a.en-nav-a:hover{color:var(--ink)}
-.page a.en-nav-a.is-on{color:var(--ink)}
-.en-nav-a.is-on::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;border-radius:2px;background:var(--aqua)}
-.en-nav-cta{margin-left:auto;flex:none;padding-left:16px}
-.en-why{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:start}
-.en-fig{border-radius:14px;overflow:hidden;border:1px solid var(--rule);background:var(--panel)}
-.en-fig figcaption{display:flex;gap:10px;align-items:flex-start;padding:14px 18px;font-size:15px;line-height:1.45;color:var(--muted);border-top:1px solid var(--rule-soft)}
-.en-fig figcaption b{color:var(--ink);font-weight:600}
-.en-fig figcaption svg{width:18px;height:18px;margin-top:2px;color:var(--aqua)}
-.en-why-list{display:flex;flex-direction:column;gap:0;list-style:none}
-.en-why-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:22px 0;border-top:1px solid var(--rule-soft)}
-.en-why-item:first-child{border-top:0;padding-top:4px}
-.en-num{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:15px;font-weight:500;color:var(--aqua);background:var(--wash);border:1px solid var(--rule-soft)}
-.en-h3{font-family:var(--display);font-stretch:88%;font-weight:700;font-size:21px;line-height:1.2;color:var(--ink);margin-bottom:6px}
-.en-p{font-size:16.5px;line-height:1.55;color:var(--text)}
-.en-p + .en-p{margin-top:10px}
-.en-p b{color:var(--ink);font-weight:600}
-.en-safe{display:flex;align-items:center;gap:12px;margin-top:8px;padding:14px 16px;border-radius:10px;background:var(--ok-wash);color:var(--ink);font-size:15.5px;line-height:1.4}
-.en-safe svg{width:20px;height:20px;color:var(--ok)}
-.en-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.en-card{position:relative;padding:28px 26px 26px;border-radius:14px;background:var(--panel);border:1px solid var(--rule-soft)}
-.en-card-ico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--wash);border:1px solid var(--rule-soft);color:var(--aqua);margin-bottom:20px}
-.en-card-ico svg{width:24px;height:24px}
-.en-card-tag{position:absolute;top:28px;right:26px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--muted)}
-.en-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
-.en-plus{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start;padding:22px 26px;border-radius:14px;border:1px dashed var(--rule)}
-.en-plus .en-card-ico{margin:0}
-.en-mini{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.en-check{margin-top:40px;border-radius:16px;border:1px solid var(--rule);background:var(--panel);overflow:hidden}
-.en-check-hd{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 26px;border-bottom:1px solid var(--rule-soft)}
-.en-check-hd .en-h3{margin:0}
-.en-check-hd p{font-size:15px;color:var(--muted);margin-top:2px}
-.en-check-actions{display:flex;gap:8px;align-items:center}
-.en-progress{font-family:var(--mono);font-size:13px;color:var(--muted);margin-right:8px;white-space:nowrap}
-.en-progress b{color:var(--aqua);font-weight:500}
-.en-check-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.en-check-col{padding:22px 26px 24px}
-.en-check-col + .en-check-col{border-left:1px solid var(--rule-soft)}
-.en-check-col .en-mini{margin-bottom:12px}
-.en-cbx{position:relative;display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start;margin:0;padding:8px 0;font-weight:400;font-size:15.5px;line-height:1.4;color:var(--text);cursor:pointer;user-select:none}
-.en-cbx input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
-.en-cbx i{width:22px;height:22px;border-radius:6px;border:1.5px solid var(--rule);background:var(--paper);display:flex;align-items:center;justify-content:center;transition:background .15s,border-color .15s}
-.en-cbx i svg{width:14px;height:14px;color:#04121F;opacity:0;transition:opacity .15s}
-.en-cbx input:checked + i{background:var(--aqua);border-color:var(--aqua)}
-.en-cbx input:checked + i svg{opacity:1}
-.en-cbx input:checked ~ span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--rule)}
-.en-cbx input:focus-visible + i{outline:2px solid var(--aqua);outline-offset:2px}
-.en-steps{list-style:none;display:flex;flex-direction:column;gap:0}
-.en-step{display:grid;grid-template-columns:72px minmax(0,1fr);gap:28px;padding:40px 0;border-top:1px solid var(--rule-soft)}
-.en-step:first-child{border-top:0;padding-top:0}
-.en-step-num{font-family:var(--display);font-stretch:78%;font-weight:800;font-size:56px;line-height:.9;color:var(--aqua);letter-spacing:-.02em}
-.en-step-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
-.en-step-body.is-wide{grid-template-columns:minmax(0,1fr)}
-.en-step .en-h3{font-size:26px;margin-bottom:10px}
-.en-bullets{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px}
-.en-bullets li{position:relative;padding-left:22px;font-size:16px;line-height:1.5;color:var(--text)}
-.en-bullets li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:2px;background:var(--aqua)}
-.en-bullets b{color:var(--ink);font-weight:600}
-.en-flow{margin-top:22px;padding:24px;border-radius:14px;background:var(--panel);border:1px solid var(--rule-soft)}
-.en-flow-row{display:flex;align-items:stretch;gap:10px}
-.en-flow-node{display:flex;flex-direction:column;justify-content:center;flex:none;padding:12px 16px;border-radius:10px;background:var(--paper);border:1px solid var(--rule);font-size:15px;font-weight:600;line-height:1.25;color:var(--ink)}
-.en-flow-node small{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.en-flow-group{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;padding:10px 12px 12px;border-radius:10px;border:1px solid var(--rule)}
-.en-flow-group > small{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 4px}
-.en-flow-chips{display:flex;flex-wrap:wrap;gap:6px}
-.en-flow-chip{padding:6px 10px;border-radius:7px;background:var(--paper);border:1px solid var(--rule-soft);font-size:14px;font-weight:600;line-height:1.2;color:var(--ink);white-space:nowrap}
-.en-flow-chip.is-opt{border-style:dashed;border-color:var(--rule);color:var(--muted)}
-.en-flow-node.is-ret{border-color:var(--aqua);background:var(--wash)}
-.en-flow-node.is-dev{border-color:var(--aqua);background:var(--aqua);color:#04121F;box-shadow:0 0 0 4px rgba(76,201,230,.16)}
-.en-flow-node.is-dev small{color:#0B3A4C}
-.en-flow-arr{align-self:center;width:18px;height:18px;flex:none;color:var(--muted)}
-.en-flow-legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px;font-size:14px;color:var(--muted)}
-.en-flow-legend span{display:inline-flex;align-items:center;gap:8px}
-.en-flow-legend i{width:12px;height:12px;border-radius:3px;border:1px dashed var(--rule)}
-.en-flow-legend i.a{background:var(--aqua);border:1px solid var(--aqua)}
-.en-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.en-shot{padding:20px 20px 18px;border-radius:12px;border:1px solid var(--rule-soft);background:var(--panel)}
-.en-shot svg{width:22px;height:22px;color:var(--aqua);margin-bottom:14px}
-.en-shot b{display:block;font-family:var(--display);font-stretch:88%;font-weight:700;font-size:17px;line-height:1.25;color:var(--ink);margin-bottom:4px}
-.en-shot span{display:block;font-size:15px;line-height:1.45;color:var(--text)}
-.en-ways{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:18px;margin-bottom:28px}
-.en-way{display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:10px;border:1px solid var(--rule-soft);background:var(--panel)}
-.en-way b{flex:none;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;font-weight:500;color:var(--aqua);background:var(--wash)}
-.en-way span{flex:1 1 auto;font-size:15.5px;line-height:1.35;color:var(--ink);font-weight:600}
-.en-way em{flex:none;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ok);padding:3px 8px;border-radius:999px;background:var(--ok-wash)}
-.en-tbl-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.en-tbl{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--rule);border-radius:12px;overflow:hidden;font-size:15.5px}
-.en-tbl th{text-align:left;padding:11px 16px;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--panel-2);border-bottom:1px solid var(--rule)}
-.en-tbl td{padding:11px 16px;color:var(--ink);font-variant-numeric:tabular-nums;border-top:1px solid var(--rule-soft);background:var(--panel)}
-.en-tbl tr:first-child td{border-top:0}
-.en-tbl td:first-child{font-weight:700}
-.en-tbl tr.is-hl td{background:var(--wash);color:var(--aqua)}
-.en-tbl-note{margin-top:10px;font-size:14px;line-height:1.45;color:var(--muted)}
-.en-photo{border-radius:14px;overflow:hidden;border:1px solid var(--rule);background:var(--panel)}
-.en-photo figcaption{padding:12px 16px;font-size:14.5px;line-height:1.45;color:var(--muted);border-top:1px solid var(--rule-soft)}
-.en-photo figcaption b{color:var(--ink);font-weight:600}
-.en-step-body > .en-photo{position:sticky;top:calc(var(--aren-sticky-top,0px) + 88px)}
-.en-extras{display:flex;flex-direction:column;margin-top:18px;border-top:1px solid var(--rule-soft)}
-.en-extra{display:grid;grid-template-columns:160px minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule-soft)}
-.en-extra .en-h3{font-size:17px;margin:0}
-.en-extra p{font-size:15.5px;line-height:1.45;color:var(--text)}
-.en-send{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px}
-.en-opt{display:flex;flex-direction:column;padding:32px 30px 30px;border-radius:16px;border:1px solid var(--rule);background:var(--panel)}
-.en-opt.is-rec{border-color:var(--aqua);box-shadow:0 0 0 1px var(--aqua) inset}
-.en-opt-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
-.en-badge{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--aqua);color:#04121F}
-.en-badge.is-quiet{background:transparent;color:var(--muted);border:1px solid var(--rule)}
-.en-opt .en-h3{font-size:26px}
-.en-portal-steps{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:22px 0 0;border:1px solid var(--rule-soft);border-radius:12px;overflow:hidden}
-.en-portal-steps li{padding:13px 14px;background:var(--paper)}
-.en-portal-steps li + li{border-left:1px solid var(--rule-soft)}
-.en-portal-steps b{display:block;font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;color:var(--aqua);margin-bottom:3px}
-.en-portal-steps span{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.25}
-.en-access{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;margin-top:22px;padding:16px 18px;border-radius:12px;background:var(--wash)}
-.en-access svg{width:20px;height:20px;color:var(--aqua);margin-top:2px}
-.en-access p{font-size:15.5px;line-height:1.5;color:var(--text)}
-.en-access b{color:var(--ink);font-weight:600}
-.en-opt-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:26px}
-.en-mail-list{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule-soft)}
-.en-mail-list li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--rule-soft);font-size:15.5px;line-height:1.4;color:var(--text)}
-.en-mail-list li span{font-family:var(--mono);font-size:12px;color:var(--muted);width:20px;flex:none}
+.en-hd{margin-top:72px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.en-h2{font-family:var(--display);font-stretch:82%;font-weight:750;font-size:clamp(28px,3vw,36px);line-height:1.1;color:var(--ink)}
+.en-hd p{font-size:16px;color:var(--muted)}
+.en-need{list-style:none;margin-top:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.en-need li{padding:24px 22px 22px;border-radius:14px;background:var(--panel);border:1px solid var(--rule-soft)}
+.en-num{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:14px;font-weight:500;color:var(--aqua);background:var(--wash);border:1px solid var(--rule-soft);margin-bottom:18px}
+.en-need h3{font-family:var(--display);font-stretch:88%;font-weight:700;font-size:20px;line-height:1.2;color:var(--ink);margin-bottom:6px}
+.en-need p{font-size:15.5px;line-height:1.5;color:var(--text)}
+.en-go{margin-top:20px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;padding:36px 40px;border-radius:18px;background:linear-gradient(135deg,var(--wash),var(--panel));border:1px solid var(--aqua)}
+.en-go .en-h2{font-size:clamp(26px,2.6vw,32px)}
+.en-go p{margin-top:8px;font-size:16.5px;line-height:1.5;color:var(--text);max-width:520px}
+.en-go p a{color:var(--aqua-ink);font-weight:600;white-space:nowrap}
+.en-ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.en-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 24px;border-radius:10px;border:1px solid transparent;font-family:var(--body);font-size:17px;font-weight:700;line-height:1;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.en-btn svg{width:18px;height:18px}
+.page a.en-btn-primary{background:var(--aqua);border-color:var(--aqua);color:#04121F}
+.page a.en-btn-primary:hover{background:var(--aqua-ink);border-color:var(--aqua-ink)}
+.page a.en-btn-ghost{background:transparent;border-color:var(--rule);color:var(--ink)}
+.page a.en-btn-ghost:hover{border-color:var(--aqua);color:var(--aqua)}
+.en-refs{margin-top:20px;display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;padding:18px 4px 0;border-top:1px solid var(--rule-soft)}
+.en-refs-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.page a.en-ref{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--rule-soft);background:var(--panel);font-size:15px;font-weight:600;color:var(--ink);transition:border-color .15s,color .15s}
+.page a.en-ref:hover{border-color:var(--aqua);color:var(--aqua)}
+.en-ref svg{width:14px;height:14px;color:var(--muted)}
 .en-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:50;padding:12px 18px;border-radius:10px;background:#0B1424;color:#F1F5FA;border:1px solid #2E3D55;font-size:15px;box-shadow:0 12px 32px rgba(0,0,0,.35);transition:opacity .2s,transform .2s}
 .en-toast.is-on{opacity:1;transform:translate(-50%,0)}
-.en-refs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.page a.en-ref{display:flex;flex-direction:column;padding:26px 24px 22px;border-radius:14px;border:1px solid var(--rule-soft);background:var(--panel);color:var(--text);transition:border-color .15s,transform .15s,background .15s}
-.page a.en-ref:hover{border-color:var(--aqua);background:var(--panel-2);transform:translateY(-2px)}
-.en-ref .en-card-ico{margin-bottom:18px}
-.en-ref .en-h3{display:flex;align-items:center;gap:8px}
-.en-ref .en-h3 svg{width:16px;height:16px;color:var(--muted);transition:transform .15s,color .15s}
-.page a.en-ref:hover .en-h3 svg{transform:translate(2px,-2px);color:var(--aqua)}
-.en-ref p{font-size:15.5px;line-height:1.5;color:var(--text)}
-.en-ref-url{margin-top:auto;padding-top:18px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-.en-faq-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:48px;align-items:start}
-.en-faq-wrap .en-sec-hd{margin:0;position:sticky;top:calc(var(--aren-sticky-top,0px) + 96px)}
-.en-faq{border-top:1px solid var(--rule-soft)}
-.en-faq details{border-bottom:1px solid var(--rule-soft)}
-.en-faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;cursor:pointer;font-family:var(--display);font-stretch:90%;font-weight:650;font-size:19px;line-height:1.3;color:var(--ink)}
-.en-faq summary::-webkit-details-marker{display:none}
-.en-faq summary svg{width:20px;height:20px;color:var(--muted);transition:transform .2s}
-.en-faq details[open] summary svg{transform:rotate(45deg);color:var(--aqua)}
-.en-faq details p{padding:0 48px 24px 0;font-size:16.5px;line-height:1.6;color:var(--text)}
-.en-faq details p b{color:var(--ink);font-weight:600}
-.en-contact{margin-top:96px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;padding:40px 44px;border-radius:18px;background:linear-gradient(135deg,var(--wash),var(--panel));border:1px solid var(--rule)}
-.en-contact .en-h2{font-size:clamp(28px,3vw,38px)}
-.en-contact p{margin-top:8px;font-size:17px;color:var(--muted)}
-.en-contact-ctas{display:flex;flex-wrap:wrap;gap:12px}
 @media (prefers-color-scheme:dark){
-:root:not([data-theme="light"]){--paper:#0F1727;--panel:#131D30;--panel-2:#16233A;--ink:#F1F5FA;--text:#D5DEEA;--muted:#93A2B8;--accent:#5FB0EA;--accent-ink:#8CC8F2;--aqua:#4CC9E6;--wash:#16233A;--rule:#2E3D55;--rule-soft:#22304A;--ok:#7BD19B;--ok-wash:#173325;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.28)}
+:root:not([data-theme="light"]){--paper:#0F1727;--panel:#131D30;--ink:#F1F5FA;--text:#D5DEEA;--muted:#93A2B8;--aqua:#4CC9E6;--aqua-ink:#8CDCEF;--wash:#16233A;--rule:#2E3D55;--rule-soft:#22304A;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.28)}
 }
-@media (max-width:1020px){
-.en-hero-row{grid-template-columns:minmax(0,1fr);gap:22px}
-.en-chapters{grid-template-columns:repeat(3,minmax(0,1fr))}
-.en-why{grid-template-columns:minmax(0,1fr);gap:36px}
-.en-step-body{grid-template-columns:minmax(0,1fr);gap:24px}
-.en-send{grid-template-columns:minmax(0,1fr)}
-.en-nav-cta{display:none}
-.en-faq-wrap{grid-template-columns:minmax(0,1fr);gap:28px}
-.en-faq-wrap .en-sec-hd{position:static}
-}
-@media (max-width:820px){
-.en-three,.en-refs{grid-template-columns:minmax(0,1fr)}
-.en-two{grid-template-columns:minmax(0,1fr)}
-.en-check-grid{grid-template-columns:minmax(0,1fr)}
-.en-check-col + .en-check-col{border-left:0;border-top:1px solid var(--rule-soft)}
-.en-extras{grid-template-columns:minmax(0,1fr)}
-.en-contact{grid-template-columns:minmax(0,1fr);padding:32px 28px}
+@media (max-width:960px){
+.en-need{grid-template-columns:repeat(2,minmax(0,1fr))}
+.en-go{grid-template-columns:minmax(0,1fr);gap:24px}
+.en-ctas{justify-content:flex-start}
 }
 @media (max-width:640px){
 body{font-size:16px}
-.page{padding:0 16px 72px}
-.en-hero{padding-top:40px}
-.en-hero-eyebrow{margin-bottom:20px;font-size:11px}
-.en-eb-2{display:none}
-.en-hero-lede{font-size:17px}
-.en-hero-ctas .en-btn{flex:1 1 100%}
-.en-facts{grid-template-columns:minmax(0,1fr);margin-top:32px}
-.en-fact,.en-fact + .en-fact{padding:14px 0;border-left:0}
-.en-fact + .en-fact{border-top:1px solid var(--rule-soft)}
-.en-video{border-radius:12px}
+.page{padding:44px 16px 64px}
+.en-eyebrow{font-size:11px}
+.en-h1{margin-top:20px}
+.en-lede{font-size:17px}
+.en-video{margin-top:32px;border-radius:12px}
 .en-play{left:10px;bottom:10px;height:40px;gap:8px;padding:0 14px 0 5px;font-size:13.5px}
 .en-play-ico{width:30px;height:30px}
 .en-play-ico svg{width:12px;height:12px}
 .en-play-time{font-size:11.5px}
-.en-chapters{grid-template-columns:repeat(2,minmax(0,1fr))}
-.en-nav{margin:48px -16px 0;padding:0 8px}
-.page a.en-nav-a{padding:15px 10px;font-size:14.5px}
-.en-nav-a.is-on::after{left:10px;right:10px}
-.en-sec{padding-top:72px}
-.en-sec-hd{margin-bottom:28px}
-.en-lede{font-size:17px}
-.en-card{padding:24px 22px}
-.en-card-tag{top:24px;right:22px}
-.en-plus{padding:20px;grid-template-columns:minmax(0,1fr)}
-.en-check-hd,.en-check-col{padding-left:18px;padding-right:18px}
-.en-check-actions{width:100%}
-.en-progress{margin-right:auto}
-.en-step{grid-template-columns:minmax(0,1fr);gap:10px;padding:32px 0}
-.en-step-num{font-size:44px}
-.en-step .en-h3{font-size:23px}
-.en-extra{grid-template-columns:minmax(0,1fr);gap:2px}
-.en-way em{display:none}
-.en-flow{padding:16px}
-.en-flow-row{flex-direction:column;gap:6px}
-.en-flow-arr{transform:rotate(90deg)}
-.en-shots{grid-template-columns:minmax(0,1fr)}
-.en-shot{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:14px;padding:16px 18px}
-.en-shot svg{grid-row:span 2;margin:2px 0 0}
-.en-opt{padding:26px 20px 22px}
-.en-portal-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-.en-portal-steps li:nth-child(3){border-left:0}
-.en-portal-steps li:nth-child(n+3){border-top:1px solid var(--rule-soft)}
-.en-opt-ctas .en-btn{flex:1 1 100%}
-.en-faq summary{font-size:17.5px;padding:18px 0}
-.en-faq details p{padding-right:0}
-.en-contact{margin-top:72px;padding:28px 20px}
-.en-contact-ctas .en-btn{flex:1 1 100%}
+.en-hd{margin-top:52px}
+.en-need{grid-template-columns:minmax(0,1fr);gap:10px}
+.en-need li{display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:16px;padding:18px}
+.en-num{grid-row:span 2;margin:0}
+.en-go{padding:28px 20px}
+.en-ctas .en-btn{flex:1 1 100%}
+.en-refs-label{flex-basis:100%}
 }
 @media (prefers-reduced-motion:reduce){
-.en-btn,.en-play,.en-ref,.en-faq summary svg,.en-toast{transition:none}
+.en-btn,.en-play,.en-ref,.en-toast{transition:none}
 }
 </style>
 </head>
 <body>
 <div class="page">
 
-<header class="en-hero" id="en-top">
-  <div class="en-hero-eyebrow"><i></i>Hotel engineers &amp; contractors<span class="en-eb-2"> &middot; Start here</span></div>
-  <div class="en-hero-row">
-    <h1 class="en-h1">Your pools are sized on paper. <span>Now we need eyes on the pump room.</span></h1>
-    <div>
-      <p class="en-hero-lede">Your property&rsquo;s management has asked AquaRev Water to finalize device requirements for your pools and spas. <b>Watch the four-minute guide, capture a few specifications on your next pump room visit, and send them to us.</b></p>
-      <div class="en-hero-ctas">
-        <a class="en-btn en-btn-primary" href="#need">See what we need
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
-        <a class="en-btn en-btn-ghost" href="https://www.aquarevwater.us/calculator" target="_blank" rel="noopener">Open the Engineer Portal
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-      </div>
-    </div>
-  </div>
+<div class="en-eyebrow"><i></i>Engineering &amp; Contractors</div>
+<h1 class="en-h1">Welcome to AquaRev Water&rsquo;s <span>Engineering &amp; Contractors page.</span></h1>
+<p class="en-lede">Your property has asked AquaRev Water to confirm how its pools and spas are set up. Start with this short guide: it shows what to capture in the pump room and how to send it to us.</p>
 
-  <div class="en-video-wrap" id="guide">
-    <div class="en-video is-pending" data-video>
-      <img src="img/guide-poster.jpg" alt="Pump Room Specifications Guide for AquaRev Water devices, title frame" width="1600" height="900">
-      <div class="en-video-shade"></div>
-      <button class="en-play" type="button" data-video-play aria-label="Play the Pump Room Specifications Guide">
-        <span class="en-play-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
-        <span class="en-play-live">Watch the guide</span><span class="en-play-soon">Video publishing soon</span>
-        <span class="en-play-time">3:49</span>
-      </button>
-    </div>
-    <div class="en-chapters" data-chapters>
-      <button class="en-chapter" type="button" data-chapter="0"><span>01</span>Record the walkthrough</button>
-      <button class="en-chapter" type="button" data-chapter="1"><span>02</span>Find the return</button>
-      <button class="en-chapter" type="button" data-chapter="2"><span>03</span>Size it</button>
-      <button class="en-chapter" type="button" data-chapter="3"><span>04</span>Count &amp; label</button>
-      <button class="en-chapter" type="button" data-chapter="4"><span>05</span>Note the extras</button>
-      <button class="en-chapter" type="button" data-chapter="5"><span>06</span>Send it</button>
-    </div>
-    <p class="en-video-note" data-video-note>The guide is being published now. Everything it covers is written out below, in the same order.</p>
-  </div>
+<div class="en-video is-pending" id="guide" data-video>
+  <img src="img/guide-poster.jpg" alt="Pump Room Specifications Guide for AquaRev Water devices" width="1600" height="900">
+  <div class="en-video-shade"></div>
+  <button class="en-play" type="button" data-video-play aria-label="Play the Pump Room Specifications Guide">
+    <span class="en-play-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
+    <span class="en-play-live">Watch the guide</span><span class="en-play-soon">Video publishing soon</span>
+    <span class="en-play-time">3:49</span>
+  </button>
+</div>
 
-  <div class="en-facts">
-    <div class="en-fact">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
-      <div><b>Look and record only</b>Nothing is cut, changed or shut down</div>
-    </div>
-    <div class="en-fact">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
-      <div><b>One visit per pump room</b>Your phone and a tape measure</div>
-    </div>
-    <div class="en-fact">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
-      <div><b>Send it your way</b>Through the portal, or by email</div>
-    </div>
-  </div>
-</header>
+<div class="en-hd">
+  <h2 class="en-h2">What we need from you</h2>
+  <p>One visit to the pump room. Nothing is cut or shut down.</p>
+</div>
+<ol class="en-need">
+  <li><div class="en-num">1</div><div><h3>Walk the pump room</h3><p>A short video, from the pumps to the return lines.</p></div></li>
+  <li><div class="en-num">2</div><div><h3>Confirm each pool</h3><p>Volume and water type. We&rsquo;ve estimated them; you confirm.</p></div></li>
+  <li><div class="en-num">3</div><div><h3>Size the returns</h3><p>Count the return lines. Note each pipe size, with a photo.</p></div></li>
+  <li><div class="en-num">4</div><div><h3>Send it to us</h3><p>Through the Engineer Portal, or by email.</p></div></li>
+</ol>
 
-<nav class="en-nav" aria-label="On this page">
-  <div class="en-nav-in">
-    <a class="en-nav-a" href="#why">Why you&rsquo;re here</a>
-    <a class="en-nav-a" href="#need">What we need</a>
-    <a class="en-nav-a" href="#capture">How to capture it</a>
-    <a class="en-nav-a" href="#send">How to send it</a>
-    <a class="en-nav-a" href="#refs">References</a>
-    <a class="en-nav-a" href="#faq">FAQ</a>
-    <div class="en-nav-cta"><a class="en-btn en-btn-primary en-btn-sm" href="https://www.aquarevwater.us/calculator" target="_blank" rel="noopener">Engineer Portal</a></div>
-  </div>
-</nav>
-
-<section class="en-sec" id="why">
-  <div class="en-sec-hd">
-    <div class="en-kicker">01 <b>&mdash;</b> Why you&rsquo;re here</div>
-    <h2 class="en-h2">The assessment is done. <em>Your pump room finishes it.</em></h2>
-  </div>
-  <div class="en-why">
-    <figure class="en-fig">
-      <img src="img/pump-room.jpg" alt="Pump room with pump, filter and chemical feed. The AquaRev device sits on the return line after the last piece of equipment, before the water goes back to the pool." width="1400" height="788" loading="lazy">
-      <figcaption>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
-        <span><b>Where the device goes:</b> in-line on the return, after the last piece of treatment equipment and before the water goes back to the pool.</span>
-      </figcaption>
-    </figure>
-    <ol class="en-why-list">
-      <li class="en-why-item">
-        <div class="en-num">1</div>
-        <div><h3 class="en-h3">Your assessment is ready</h3><p class="en-p">AquaRev has already prepared an assessment for your property, with estimated device requirements for each pool and spa.</p></div>
-      </li>
-      <li class="en-why-item">
-        <div class="en-num">2</div>
-        <div><h3 class="en-h3">We can&rsquo;t see inside your pump room</h3><p class="en-p">Our devices install on the return lines, so <b>the right pipe size means the right device.</b> Only someone on site can confirm how each system is set up.</p></div>
-      </li>
-      <li class="en-why-item">
-        <div class="en-num">3</div>
-        <div><h3 class="en-h3">Your confirmation finalizes the proposal</h3><p class="en-p">With your specifications we finalize device requirements, total equipment cost, and updated performance and ROI projections for your property.</p>
-        <div class="en-safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>This is a survey, not an installation. Nothing is cut, changed or shut down.</div></div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<section class="en-sec" id="need">
-  <div class="en-sec-hd">
-    <div class="en-kicker">02 <b>&mdash;</b> What we need</div>
-    <h2 class="en-h2">For every pool and spa, <em>three things.</em></h2>
-    <p class="en-lede">Plus one walkthrough video per pump room and three quick notes. That&rsquo;s the whole ask.</p>
-  </div>
-
-  <div class="en-three">
-    <div class="en-card">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2 0 2-1.5 4-1.5S8 12 10 12s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M2 17c2 0 2-1.5 4-1.5S8 17 10 17s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M6 7V4M12 7V2M18 7V4"/></svg></div>
-      <span class="en-card-tag">A</span>
-      <h3 class="en-h3">Confirmed volume</h3>
-      <p class="en-p">Gallons or m&sup3;, plus the water type. Your rep&rsquo;s assessment has an estimate. <b>Confirm it or correct it.</b></p>
-    </div>
-    <div class="en-card">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M2 12h2M20 12h2"/></svg></div>
-      <span class="en-card-tag">B</span>
-      <h3 class="en-h3">Every return line, sized</h3>
-      <p class="en-p">Count the return lines and record each one&rsquo;s pipe size. <b>The pipe size sets the device size.</b></p>
-    </div>
-    <div class="en-card">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg></div>
-      <span class="en-card-tag">C</span>
-      <h3 class="en-h3">Photos of those pipes</h3>
-      <p class="en-p">A close-up of each pipe size, showing the stamp or a tape measure, and <b>one wide shot</b> for context.</p>
-    </div>
-  </div>
-
-  <div class="en-two">
-    <div class="en-plus">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></div>
-      <div><div class="en-mini">Per pump room</div><h3 class="en-h3">A walkthrough video</h3><p class="en-p">30 seconds to 2 minutes, from the pumps to the return lines.</p></div>
-    </div>
-    <div class="en-plus">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
-      <div><div class="en-mini">Per return line</div><h3 class="en-h3">Three quick notes</h3><p class="en-p">Straight pipe available, pipe material, and where the isolation valves are.</p></div>
-    </div>
-  </div>
-
-  <div class="en-check" data-checklist>
-    <div class="en-check-hd">
-      <div>
-        <h3 class="en-h3">Field checklist</h3>
-        <p>Tick items off on your phone as you go, or print it for the pump room.</p>
-      </div>
-      <div class="en-check-actions">
-        <span class="en-progress" data-progress><b>0</b> of 11 done</span>
-        <button class="en-btn en-btn-ghost en-btn-sm" type="button" data-check-reset>Reset</button>
-        <button class="en-btn en-btn-ghost en-btn-sm" type="button" data-check-print>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>Print</button>
-      </div>
-    </div>
-    <div class="en-check-grid">
-      <div class="en-check-col">
-        <div class="en-mini">Each pump room</div>
-        <label class="en-cbx"><input type="checkbox" data-k="pr-video"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Walkthrough video, pumps to returns</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="pr-name"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Say each pool&rsquo;s name and pipe size on the video</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="pr-pools"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Note which pools this room serves</span></label>
-      </div>
-      <div class="en-check-col">
-        <div class="en-mini">Each pool &amp; spa</div>
-        <label class="en-cbx"><input type="checkbox" data-k="p-vol"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Volume confirmed (gallons or m&sup3;)</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="p-type"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Water type recorded</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="p-count"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Return lines counted, size of each recorded</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="p-close"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Close-up photo of each pipe size</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="p-wide"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>One wide shot showing the label</span></label>
-      </div>
-      <div class="en-check-col">
-        <div class="en-mini">Notes on each return</div>
-        <label class="en-cbx"><input type="checkbox" data-k="n-run"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Straight pipe available</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="n-mat"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Pipe material</span></label>
-        <label class="en-cbx"><input type="checkbox" data-k="n-valve"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i><span>Isolation valve locations</span></label>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="en-sec" id="capture">
-  <div class="en-sec-hd">
-    <div class="en-kicker">03 <b>&mdash;</b> How to capture it</div>
-    <h2 class="en-h2">Five steps in the pump room.</h2>
-    <p class="en-lede">The same order as the guide and the portal. Bring your phone and a tape measure.</p>
-  </div>
-  <ol class="en-steps">
-
-    <li class="en-step">
-      <div class="en-step-num">01</div>
-      <div class="en-step-body">
-        <div>
-          <h3 class="en-h3">Record the walkthrough</h3>
-          <p class="en-p">One video per pump room. Photos and video are the best way for us to see your system as you see it.</p>
-          <ul class="en-bullets">
-            <li><b>Start at the pump</b> and follow the water downstream.</li>
-            <li><b>Finish with a slow pan</b> across the return lines.</li>
-            <li><b>Say the pool name and pipe size</b> as you go.</li>
-          </ul>
-        </div>
-        <div class="en-shots">
-          <div class="en-shot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
-            <b>Walkthrough</b><span>30 sec to 2 min, pumps to returns</span>
-          </div>
-          <div class="en-shot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>
-            <b>Close-up</b><span>One of each pipe size</span>
-          </div>
-          <div class="en-shot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 16 5-5 4 4 3-3 6 6"/></svg>
-            <b>Wide shot</b><span>Layout and space around the returns</span>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <li class="en-step">
-      <div class="en-step-num">02</div>
-      <div class="en-step-body is-wide">
-        <div>
-          <h3 class="en-h3">Find the return</h3>
-          <p class="en-p">Every loop runs the same way. Whatever leaves the <b>last piece of equipment</b> and heads back to the pool is the return. That&rsquo;s where the device goes.</p>
-          <div class="en-flow" role="img" aria-label="Water flow: from the pool through skimmers and main drain to the pump, then the treatment train (filter, heater, chemical feed, and UV or ozone if fitted), then the AquaRev device on the return line, then back to the pool.">
-            <div class="en-flow-row">
-              <span class="en-flow-node"><small>Suction</small>Skimmers &amp; drain</span>
-              <svg class="en-flow-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              <span class="en-flow-node">Pump</span>
-              <svg class="en-flow-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              <div class="en-flow-group">
-                <small>Treatment equipment</small>
-                <div class="en-flow-chips"><span class="en-flow-chip">Filter</span><span class="en-flow-chip">Heater</span><span class="en-flow-chip">Chemical feed</span><span class="en-flow-chip is-opt">UV / ozone</span></div>
-              </div>
-              <svg class="en-flow-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              <span class="en-flow-node is-dev"><small>Return</small>AquaRev device</span>
-              <svg class="en-flow-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              <span class="en-flow-node is-ret"><small>Back to</small>Pool</span>
-            </div>
-            <div class="en-flow-legend"><span><i></i>Not on every system</span><span><i class="a"></i>Where the device installs: the return pipe we need specified</span></div>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <li class="en-step">
-      <div class="en-step-num">03</div>
-      <div class="en-step-body">
-        <div>
-          <h3 class="en-h3">Size it</h3>
-          <p class="en-p">Nominal pipe size isn&rsquo;t the outside diameter. <b>A 4&Prime; pipe measures 4&frac12;&Prime; across.</b> Use whichever method is easiest:</p>
-          <ol class="en-ways">
-            <li class="en-way"><b>1</b><span>Read the stamp and photograph it</span><em>Easiest</em></li>
-            <li class="en-way"><b>2</b><span>No stamp? Measure across the outside</span></li>
-            <li class="en-way"><b>3</b><span>Can&rsquo;t reach across? Wrap a tape around it and divide by 3.14</span></li>
-          </ol>
-          <div class="en-tbl-label">Match your measurement</div>
-          <table class="en-tbl">
-            <thead><tr><th>Pipe size</th><th>Measures across</th></tr></thead>
-            <tbody>
-              <tr><td>2&Prime;</td><td>2&frac38;&Prime;</td></tr>
-              <tr><td>3&Prime;</td><td>3&frac12;&Prime;</td></tr>
-              <tr class="is-hl"><td>4&Prime;</td><td>4&frac12;&Prime;</td></tr>
-              <tr><td>6&Prime;</td><td>6&frac58;&Prime;</td></tr>
-              <tr><td>8&Prime;</td><td>8&frac58;&Prime;</td></tr>
-            </tbody>
-          </table>
-          <p class="en-tbl-note">Pipe marked in millimetres? Record it as stamped. The portal accepts inches or mm.</p>
-        </div>
-        <figure class="en-photo">
-          <img src="img/pipe-closeup.jpg" alt="Close-up of a return pipe with its stamp, a temporary label reading Plunge Pool 1, and a tape measure across the outside" width="1000" height="666" loading="lazy">
-          <figcaption><b>Close-up.</b> Stamp, temporary label and tape measure in one shot.</figcaption>
-        </figure>
-      </div>
-    </li>
-
-    <li class="en-step">
-      <div class="en-step-num">04</div>
-      <div class="en-step-body">
-        <div>
-          <h3 class="en-h3">Count it, label it</h3>
-          <p class="en-p">Each pool gets its own record, and each pipe size gets its own row.</p>
-          <ul class="en-bullets">
-            <li><b>One return trunk that splits</b> on its way to the pool? Record the trunk and describe the split in Notes.</li>
-            <li><b>Photograph the existing pipe marker</b>, such as &ldquo;MAIN POOL &ndash; RETURN&rdquo;.</li>
-            <li><b>No marker?</b> Add a temporary label showing the body of water and pipe size before you take the photo.</li>
-          </ul>
-        </div>
-        <figure class="en-photo">
-          <img src="img/pipe-wide.jpg" alt="Return pipe with a printed MAIN POOL RETURN marker, a flow arrow and a tape measure across it" width="1000" height="563" loading="lazy">
-          <figcaption><b>Pipe marker.</b> Body of water and flow direction, captured with the size.</figcaption>
-        </figure>
-      </div>
-    </li>
-
-    <li class="en-step">
-      <div class="en-step-num">05</div>
-      <div class="en-step-body">
-        <div>
-          <h3 class="en-h3">Note the extras</h3>
-          <p class="en-p">Three things decide how the device fits. All three go in Notes.</p>
-          <div class="en-extras">
-            <div class="en-extra"><h4 class="en-h3">Straight run</h4><p>Length of straight return pipe available</p></div>
-            <div class="en-extra"><h4 class="en-h3">Pipe material</h4><p>PVC, CPVC, steel or other, and schedule if stamped</p></div>
-            <div class="en-extra"><h4 class="en-h3">Isolation valves</h4><p>Where they sit on each return</p></div>
-          </div>
-        </div>
-        <div>
-          <div class="en-tbl-label">Straight pipe the device needs</div>
-          <table class="en-tbl">
-            <thead><tr><th>Return pipe</th><th>Straight run</th></tr></thead>
-            <tbody>
-              <tr><td>2&Prime;</td><td>about 28&Prime;</td></tr>
-              <tr><td>3&Prime;</td><td>about 32&Prime;</td></tr>
-              <tr><td>4&Prime;</td><td>about 36&Prime;</td></tr>
-              <tr><td>6&Prime;</td><td>about 48&Prime;</td></tr>
-            </tbody>
-          </table>
-          <p class="en-tbl-note">Device length plus 4&Prime; clear on each side for the unions. Tight run? Note it anyway; our engineering team will recommend the best setup.</p>
-        </div>
-      </div>
-    </li>
-  </ol>
-</section>
-
-<section class="en-sec" id="send">
-  <div class="en-sec-hd">
-    <div class="en-kicker">04 <b>&mdash;</b> How to send it</div>
-    <h2 class="en-h2">Two ways to send it. <em>Pick what suits your team.</em></h2>
-  </div>
-  <div class="en-send">
-    <div class="en-opt is-rec">
-      <div class="en-opt-top"><span class="en-badge">Recommended</span></div>
-      <h3 class="en-h3">The Engineer Portal</h3>
-      <p class="en-p">Built for this job. Capture photos and video on your phone, complete a card for each pool, and send it. <b>Your AquaRev rep is notified automatically</b> and our engineering team works from the same record.</p>
-      <ol class="en-portal-steps">
-        <li><b>STEP 1</b><span>Briefing</span></li>
-        <li><b>STEP 2</b><span>Property</span></li>
-        <li><b>STEP 3</b><span>Pools</span></li>
-        <li><b>STEP 4</b><span>Review &amp; send</span></li>
-      </ol>
-      <div class="en-access">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-        <p><b>Getting access.</b> Your AquaRev rep sets up your account. Sign in with your mobile number as the access code. Works on any phone or computer, and installs as an app.</p>
-      </div>
-      <div class="en-opt-ctas">
-        <a class="en-btn en-btn-primary" href="https://www.aquarevwater.us/calculator" target="_blank" rel="noopener">Open the Engineer Portal
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-        <a class="en-btn en-btn-ghost" href="mailto:water@AquaRevWater.us?subject=Engineer%20Portal%20access">Request access</a>
-      </div>
-    </div>
-    <div class="en-opt">
-      <div class="en-opt-top"><span class="en-badge is-quiet">No account needed</span></div>
-      <h3 class="en-h3">A direct summary</h3>
-      <p class="en-p">Prefer email? Send the same information to your AquaRev rep, or to <a href="mailto:water@AquaRevWater.us">water@AquaRevWater.us</a>. Include:</p>
-      <ul class="en-mail-list">
-        <li><span>01</span>Property name and your contact details</li>
-        <li><span>02</span>Each pool and spa: volume and water type</li>
-        <li><span>03</span>Return lines: how many, and the size of each</li>
-        <li><span>04</span>Straight run, pipe material, isolation valves</li>
-        <li><span>05</span>Photos and video (a shared-drive link is fine)</li>
-      </ul>
-      <div class="en-opt-ctas">
-        <a class="en-btn en-btn-ghost" href="mailto:water@AquaRevWater.us" data-mail-template>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email a summary</a>
-        <button class="en-btn en-btn-ghost" type="button" data-copy-template>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy template</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="en-sec" id="refs">
-  <div class="en-sec-hd">
-    <div class="en-kicker">05 <b>&mdash;</b> References</div>
-    <h2 class="en-h2">Technical references.</h2>
-    <p class="en-lede">For implementation detail, before install day, or if you want to go deeper on the device.</p>
-  </div>
-  <div class="en-refs">
-    <a class="en-ref" href="https://www.aquarevwater.us/specifications" target="_blank" rel="noopener">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg></div>
-      <h3 class="en-h3">Installation Specifications <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
-      <p>Device data, where it goes, flow windows, connections and clearances. Section 22 51 19.</p>
-      <div class="en-ref-url">aquarevwater.us/specifications</div>
-    </a>
-    <a class="en-ref" href="https://www.aquarevwater.us/drawings" target="_blank" rel="noopener">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></div>
-      <h3 class="en-h3">Installation Drawings <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
-      <p>Reference drawing set: pump room plan, flow diagram, union detail and installation sequence.</p>
-      <div class="en-ref-url">aquarevwater.us/drawings</div>
-    </a>
-    <a class="en-ref" href="https://www.aquarevwater.us/data" target="_blank" rel="noopener">
-      <div class="en-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-      <h3 class="en-h3">Technology &amp; Data <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
-      <p>How the device works, certifications, third-party lab reports and the technical white paper.</p>
-      <div class="en-ref-url">aquarevwater.us/data</div>
-    </a>
-  </div>
-</section>
-
-<section class="en-sec en-faq-wrap" id="faq">
-  <div class="en-sec-hd">
-    <div class="en-kicker">06 <b>&mdash;</b> FAQ</div>
-    <h2 class="en-h2">Common questions.</h2>
-    <p class="en-lede">Anything else, call us on site. We&rsquo;re happy to walk through it with you.</p>
-  </div>
-  <div class="en-faq">
-    <details>
-      <summary>Do we need to shut anything down?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-      <p>No. This visit is look and record only: video, photos, measurements and notes. Nothing is cut, opened or changed, and the pools stay in service.</p>
-    </details>
-    <details>
-      <summary>Do I need a portal account?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-      <p>No. The portal is the easiest way to capture and send everything, but an email summary works too. If you&rsquo;d like portal access, ask your AquaRev rep or email <a href="mailto:water@AquaRevWater.us">water@AquaRevWater.us</a>.</p>
-    </details>
-    <details>
-      <summary>We have more than one pump room.<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-      <p>Record one walkthrough per pump room, and note which pools and spas each room serves. In the portal, you link each pool to its pump room.</p>
-    </details>
-    <details>
-      <summary>I&rsquo;m not sure which line is the return.<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-      <p>Follow the water from the pump, through each piece of equipment, until it heads back to the pool. If the system is complex, <b>send what you have.</b> Our engineering team works from the same video and photos and will recommend the best setup.</p>
-    </details>
-    <details>
-      <summary>Our pipes are marked in millimetres.<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-      <p>Record the size as stamped. The portal lets you set the site&rsquo;s pipe standard to inches or mm, and volumes can be entered in gallons or m&sup3;.</p>
-    </details>
-    <details>
-      <summary>What happens after we send it?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-      <p>Your AquaRev rep reviews the information with our engineering team and finalizes device requirements, total equipment cost, and updated performance and ROI projections for your property. We&rsquo;ll be in touch if anything needs a second look.</p>
-    </details>
-  </div>
-</section>
-
-<aside class="en-contact">
+<div class="en-go">
   <div>
-    <h2 class="en-h2">Questions on site?</h2>
-    <p>Call or email and we&rsquo;ll walk through it with you.</p>
+    <h2 class="en-h2">Ready to start?</h2>
+    <p>Your AquaRev rep sets up your portal access, with step-by-step help along the way. Questions? Call <a href="tel:+18329796758">(832) 979-6758</a>.</p>
   </div>
-  <div class="en-contact-ctas">
-    <a class="en-btn en-btn-primary" href="tel:+18329796758">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(832) 979-6758</a>
-    <a class="en-btn en-btn-ghost" href="mailto:water@AquaRevWater.us">water@AquaRevWater.us</a>
+  <div class="en-ctas">
+    <a class="en-btn en-btn-primary" href="https://www.aquarevwater.us/calculator" target="_blank" rel="noopener">Open the Engineer Portal
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <a class="en-btn en-btn-ghost" href="mailto:water@AquaRevWater.us?subject=Pump%20room%20specifications">Email AquaRev</a>
   </div>
-</aside>
+</div>
+
+<div class="en-refs">
+  <span class="en-refs-label">References</span>
+  <a class="en-ref" href="https://www.aquarevwater.us/specifications" target="_blank" rel="noopener">Specifications<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  <a class="en-ref" href="https://www.aquarevwater.us/drawings" target="_blank" rel="noopener">Installation Drawings<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  <a class="en-ref" href="https://www.aquarevwater.us/data" target="_blank" rel="noopener">Technology &amp; Data<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+</div>
 
 <div class="en-toast" role="status" aria-live="polite" data-toast></div>
 </div>
@@ -772,182 +173,34 @@ body{font-size:16px}
 (function(){
   var R = document.getElementById('aren') || document.body;
 
-  // ── Guide video. Paste the YouTube id once the video is published; chapter
-  //    start times (seconds) make the six chapter buttons jump into the video.
-  var GUIDE = {
-    youtubeId: '',
-    chapters: [null, null, null, null, null, null]
-  };
+  // ── Guide video. Paste the YouTube id once the video is published.
+  var GUIDE = { youtubeId: '' };
 
   var video = R.querySelector('[data-video]');
-  var chapters = R.querySelector('[data-chapters]');
   var live = !!GUIDE.youtubeId;
-  function playAt(sec){
-    if(!live || !video) return;
-    var src = 'https://www.youtube-nocookie.com/embed/' + GUIDE.youtubeId + '?autoplay=1&rel=0&modestbranding=1' + (sec ? '&start=' + Math.floor(sec) : '');
-    var f = video.querySelector('iframe');
-    if(!f){
-      f = document.createElement('iframe');
-      f.title = 'Pump Room Specifications Guide';
-      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-      f.setAttribute('allowfullscreen', '');
-      video.innerHTML = '';
-      video.appendChild(f);
-    }
-    f.src = src;
-  }
-  if(live){
-    video.classList.remove('is-pending');
-    var st = R.querySelector('[data-video-status]'); if(st) st.parentNode.removeChild(st);
-    var note = R.querySelector('[data-video-note]'); if(note) note.textContent = 'Jump to any chapter, or watch it through. Everything it covers is also written out below.';
-    if(GUIDE.chapters.some(function(c){ return c !== null; })) chapters.classList.add('is-live');
-  } else {
+  if(live) video.classList.remove('is-pending');
+  else {
     var pb = R.querySelector('[data-video-play]');
     if(pb){ pb.setAttribute('aria-disabled', 'true'); pb.setAttribute('aria-label', 'Video publishing soon'); }
   }
   R.addEventListener('click', function(e){
-    var p = e.target.closest('[data-video-play]');
-    if(p){ if(live) playAt(0); else toast('The guide is publishing soon. Everything it covers is below.'); return; }
-    var c = e.target.closest('[data-chapter]');
-    if(c){
-      var t = GUIDE.chapters[+c.getAttribute('data-chapter')];
-      if(live && t !== null){ playAt(t); video.scrollIntoView({behavior:'smooth', block:'center'}); }
-      else { var map = ['capture','capture','capture','capture','capture','send']; go('#' + map[+c.getAttribute('data-chapter')]); }
-      return;
-    }
-    var a = e.target.closest('a[href^="#"]');
-    if(a && a.getAttribute('href').length > 1){ e.preventDefault(); go(a.getAttribute('href')); }
+    if(!e.target.closest('[data-video-play]')) return;
+    if(!live){ toast('The guide is publishing soon. Questions? Call (832) 979-6758.'); return; }
+    var f = document.createElement('iframe');
+    f.title = 'Pump Room Specifications Guide';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.setAttribute('allowfullscreen', '');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + GUIDE.youtubeId + '?autoplay=1&rel=0&modestbranding=1';
+    video.innerHTML = '';
+    video.appendChild(f);
   });
 
-  // ── Smooth in-page scroll that clears the site nav and this page's sticky bar
-  function go(hash){
-    var t = R.querySelector(hash); if(!t) return;
-    var top = t.getBoundingClientRect().top + window.pageYOffset - stickyOffset() + 1;
-    window.scrollTo({top: top, behavior: reduce() ? 'auto' : 'smooth'});
-    if(history.replaceState) history.replaceState(null, '', hash);
-  }
-  function reduce(){ return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
-  var nav = R.querySelector('.en-nav');
-  function stickyOffset(){
-    var site = parseInt(getComputedStyle(R).getPropertyValue('--aren-sticky-top'), 10) || 0;
-    return site + (nav ? nav.offsetHeight : 0) + 16;
-  }
-
-  // ── Scrollspy for the section bar
-  var links = [].slice.call(R.querySelectorAll('.en-nav-a'));
-  var secs = links.map(function(l){ return R.querySelector(l.getAttribute('href')); });
-  function spy(){
-    var y = stickyOffset() + 40, on = -1;
-    secs.forEach(function(s, i){ if(s && s.getBoundingClientRect().top <= y) on = i; });
-    links.forEach(function(l, i){ l.classList.toggle('is-on', i === on); });
-    if(on > -1){
-      var bar = nav.querySelector('.en-nav-in'), l = links[on];
-      if(bar.scrollWidth > bar.clientWidth){
-        var x = l.offsetLeft - (bar.clientWidth - l.offsetWidth) / 2;
-        if(Math.abs(bar.scrollLeft - x) > 4) bar.scrollTo({left: x, behavior: 'auto'});
-      }
-    }
-  }
-  var ticking = false;
-  window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(function(){ ticking = false; spy(); }); } }, {passive:true});
-  window.addEventListener('resize', spy);
-  spy();
-
-  // ── Field checklist, remembered on this device
-  var KEY = 'aquarev-engineer-checklist-v1';
-  var boxes = [].slice.call(R.querySelectorAll('[data-checklist] input[type=checkbox]'));
-  var state = {};
-  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch(err){ state = {}; }
-  boxes.forEach(function(b){ b.checked = !!state[b.getAttribute('data-k')]; });
-  function progress(){
-    var n = boxes.filter(function(b){ return b.checked; }).length;
-    var p = R.querySelector('[data-progress]');
-    if(p) p.innerHTML = '<b>' + n + '</b> of ' + boxes.length + ' done';
-  }
-  function save(){
-    boxes.forEach(function(b){ state[b.getAttribute('data-k')] = b.checked; });
-    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(err){}
-    progress();
-  }
-  boxes.forEach(function(b){ b.addEventListener('change', save); });
-  progress();
-  var reset = R.querySelector('[data-check-reset]');
-  if(reset) reset.addEventListener('click', function(){ boxes.forEach(function(b){ b.checked = false; }); save(); });
-
-  var printBtn = R.querySelector('[data-check-print]');
-  if(printBtn) printBtn.addEventListener('click', function(){
-    var cols = [].slice.call(R.querySelectorAll('.en-check-col')).map(function(col){
-      var h = col.querySelector('.en-mini').textContent;
-      var items = [].slice.call(col.querySelectorAll('.en-cbx span')).map(function(s){ return '<li>' + s.innerHTML + '</li>'; }).join('');
-      return '<h2>' + h + '</h2><ul>' + items + '</ul>';
-    }).join('');
-    var w = window.open('', '_blank');
-    if(!w){ toast('Allow pop-ups to print the checklist.'); return; }
-    w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>AquaRev pump room checklist</title><style>'
-      + 'body{font:15px/1.45 "Source Sans 3",Arial,sans-serif;color:#0E1E3A;margin:40px;max-width:720px}'
-      + 'h1{font:700 24px/1.2 Archivo,Arial,sans-serif;margin:0 0 4px}p{margin:0 0 20px;color:#5C6B82}'
-      + 'h2{font:600 12px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#5C6B82;margin:24px 0 8px}'
-      + 'ul{list-style:none;margin:0;padding:0}li{padding:9px 0 9px 32px;border-bottom:1px solid #E3EAF2;position:relative}'
-      + 'li:before{content:"";position:absolute;left:0;top:9px;width:18px;height:18px;border:1.5px solid #0E1E3A;border-radius:4px}'
-      + '.f{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}.f div{border-bottom:1px solid #0E1E3A;padding-top:22px;font-size:12px;color:#5C6B82}'
-      + '.c{margin-top:28px;font-size:13px;color:#5C6B82}</style></head><body>'
-      + '<h1>Pump room checklist</h1><p>AquaRev Water &middot; Pump Room Specifications Guide</p>'
-      + '<div class="f"><div>Property</div><div>Pump room</div><div>Your name</div><div>Date</div></div>'
-      + cols
-      + '<p class="c">Send by the Engineer Portal (aquarevwater.us/calculator) or email water@AquaRevWater.us &middot; (832) 979-6758</p>'
-      + '</body></html>');
-    w.document.close();
-    w.focus();
-    setTimeout(function(){ w.print(); }, 300);
-  });
-
-  // ── Direct summary email template
-  var TEMPLATE = [
-    'Property:',
-    'Your name, role and mobile:',
-    'Site pipe standard (inches or mm):',
-    '',
-    'POOL / SPA 1',
-    '  Name:',
-    '  Volume (gallons or m3):',
-    '  Water type:',
-    '  Return lines (count and size of each):',
-    '  Straight run available:',
-    '  Pipe material:',
-    '  Isolation valve locations:',
-    '  Pump room it is served from:',
-    '',
-    '(Copy the block above for each pool and spa.)',
-    '',
-    'Photos and video: attached, or shared-drive link:',
-    '',
-    'Notes (splits, tight runs, anything unusual):'
-  ].join('\n');
-  var mail = R.querySelector('[data-mail-template]');
-  if(mail) mail.setAttribute('href', 'mailto:water@AquaRevWater.us?subject=' + encodeURIComponent('Pump room specifications: [property name]') + '&body=' + encodeURIComponent(TEMPLATE));
-  var copy = R.querySelector('[data-copy-template]');
-  if(copy) copy.addEventListener('click', function(){
-    function done(){ toast('Template copied. Paste it into an email to your rep.'); }
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(TEMPLATE).then(done, fallback);
-    } else fallback();
-    function fallback(){
-      var ta = document.createElement('textarea'); ta.value = TEMPLATE; ta.style.position = 'fixed'; ta.style.opacity = '0';
-      document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); done(); } catch(err){ toast('Copy failed. Use Email a summary instead.'); }
-      document.body.removeChild(ta);
-    }
-  });
-
-  // ── Toast
   var tEl = R.querySelector('[data-toast]'), tTimer;
   function toast(msg){
     if(!tEl) return;
     tEl.textContent = msg; tEl.classList.add('is-on');
     clearTimeout(tTimer); tTimer = setTimeout(function(){ tEl.classList.remove('is-on'); }, 2800);
   }
-
-  try { if(location.hash && R.querySelector(location.hash)) setTimeout(function(){ go(location.hash); }, 120); } catch(err){}
 })();
 </script>
 </body>
