@@ -8,13 +8,6 @@ root.innerHTML=`
   <div class="ae-hero-tag"><i></i>For hotel engineers &amp; contractors</div>
   <h1 class="ae-h1"><span>Engineering &amp; Contractors</span> Introduction.</h1>
   <p class="ae-lede">Welcome to AquaRev Water. We need to confirm technical information about your property&rsquo;s pools and spas. This short guide shows what to capture in the pump room and how to send it to us.</p>
-  <div class="ae-hero-ctas">
-    <a class="ae-btn ae-btn-aqua ae-btn-lg" href="#ae-guide" data-hero-watch>
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>Watch the guide</a>
-    <a class="ae-btn ae-btn-lg" href="https://www.aquarevwater.us/calculator" target="_blank" rel="noopener">Open the Engineer Portal
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-    <a class="ae-hero-link" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad6bd1c3ab5b2b1d428de70_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">Download submission guide</a>
-  </div>
   <ul class="ae-creds" aria-label="Certifications">
     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>NSF/ANSI/CAN 50 certified</li>
     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>IAPMO listed</li>
@@ -193,13 +186,6 @@ root.innerHTML=`
   }
   R.addEventListener('click', function(e){
     if(e.target.closest('[data-video-play]')){ playVideo(); return; }
-    if(e.target.closest('[data-hero-watch]')){
-      e.preventDefault();
-      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      video.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'center'});
-      playVideo();
-      return;
-    }
     if(e.target.closest('[data-copy-template]')){ copyTemplate(); return; }
     var g = e.target.closest('[data-guide]');
     if(g){ e.preventDefault(); openGuide(g); return; }
