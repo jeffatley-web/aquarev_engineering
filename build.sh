@@ -13,7 +13,7 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 MASTER="$HERE/AquaRev_Engineering_Page.html"
 PAGES="https://jeffatley-web.github.io/aquarev_engineering"
 STAMP="$(date +%Y%m%d%H%M)"
-FONTS='https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap'
+FONTS='https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap'
 
 cd "$HERE"
 
@@ -43,9 +43,9 @@ scope_css() {
   ' "$root"
 }
 
-# rewrite_links — local image paths become GitHub Pages URLs
+# rewrite_links — local image and document paths become GitHub Pages URLs
 rewrite_links() {
-  sed -E -e "s|src=\"img/|src=\"$PAGES/img/|g"
+  sed -E -e "s|src=\"img/|src=\"$PAGES/img/|g" -e "s|href=\"docs/|href=\"$PAGES/docs/|g"
 }
 
 {

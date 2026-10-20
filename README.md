@@ -8,14 +8,14 @@ under `#aren`.
 
 ## Page outline
 
-Deliberately short, like Step 1 (Briefing) of the Engineer Portal. Detailed instruction lives
-in the portal's help, the video and the Specifications pages, not here.
+Deliberately short and styled like Step 1 (Briefing) of the Engineer Portal (Bebas Neue,
+DM Sans, navy cards, green "go" band). Detailed instruction lives in the portal's help, the
+video and the Specifications pages, not here.
 
-1. Welcome heading + one-sentence lede
-2. Pump Room Specifications Guide (video placeholder until the video is published)
-3. What we need from you: four cards (walk the pump room, confirm each pool, size the returns, send it)
-4. Ready to start: Engineer Portal (primary), Email AquaRev, phone
-5. Reference links: /specifications, /drawings, /data
+1. Introduction card: title, welcome lede, guide video, four "what we need" cards
+2. Recommended band: Open the Engineer Portal, Request portal access (mailto with template)
+3. Direct submission band: Download submission guide (pump room pop-up), Email a summary, Copy email template
+4. Resources: Specifications, Drawings, Technology & Data, Certifications, Submission Guide, contact
 
 ## Files
 
@@ -27,6 +27,16 @@ in the portal's help, the video and the Specifications pages, not here.
 | `engineering.css`, `engineering.js` | Generated. Hosted on GitHub Pages. |
 | `webflow-embed-engineering.html` | Generated. Paste into the Webflow Embed on `/engineering`. |
 | `preview.html` | Generated. Mirrors the embed locally (images load once pushed). |
+| `docs/src/AquaRev_Direct_Submission_Guide.html` | Master for the submission guide PDF. `?rooms=N` adds N Pump Room Profile pages. |
+| `docs/render.sh` | Renders the ten PDFs (`AquaRev_Submission_Guide_N_Pump_Room(s).pdf`, N = 1–10) with headless Chrome. |
+
+## Submission guide PDFs
+
+Page 1 is the guide (what we need, sizing reference with metric equivalents, how to send),
+page 2 is property & contact, then one Pump Room Profile per pump room (three bodies of
+water each). Every page ends with a Notes section. On the site, "Download submission guide"
+opens a pop-up asking how many pump rooms (1–10) and downloads the matching file. After
+editing the master, run `docs/render.sh`, then rebuild and push.
 
 ## Turning the video on
 
@@ -37,7 +47,7 @@ button then reads "Watch the guide" and plays the video in place. With no id set
 ## GitHub Pages
 
 - Repo: `jeffatley-web/aquarev_engineering` (public), Pages source `main` branch, root.
-- Push `engineering.css`, `engineering.js` and `img/`.
+- Push `engineering.css`, `engineering.js`, `img/` and `docs/*.pdf`.
 
 ## Update workflow
 

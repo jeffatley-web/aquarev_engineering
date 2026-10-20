@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AquaRev Water · Direct Submission Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+@page{size:Letter;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"DM Sans",Arial,sans-serif;font-size:10.5pt;line-height:1.45;color:#16263d;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{width:8.5in;height:11in;position:relative;overflow:hidden;page-break-after:always;display:flex;flex-direction:column}
+.sheet:last-child{page-break-after:auto}
+.hdr{background:linear-gradient(135deg,#0a2540,#040f1e);color:#fff;padding:.38in .55in .3in;display:flex;justify-content:space-between;align-items:flex-end}
+.hdr img{height:.3in;width:auto}
+.hdr-r{text-align:right;font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:#7db8cc}
+.hdr-r b{display:block;color:#48cae4;font-weight:500}
+.body{flex:1;display:flex;flex-direction:column;padding:.3in .55in 0}
+.notes{margin-top:auto;padding:.14in 0 .2in}
+.notes-l{font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase;color:#5c7690}
+.notes-ln{height:.3in;border-bottom:1px solid #b8ccd9}
+.eyebrow{font-size:7.5pt;letter-spacing:.22em;text-transform:uppercase;color:#0f9a5a;font-weight:700}
+h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:30pt;letter-spacing:.04em;line-height:1;margin:.06in 0 .08in;color:#0a2540}
+h1 span{color:#00a3c4}
+.lede{font-size:10.5pt;color:#3d5470;max-width:6.4in;margin:0}
+h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:14pt;letter-spacing:.08em;color:#008fb0;margin:.22in 0 .09in}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.1in}
+.step{padding:.12in .13in .13in;border:1px solid #cfe0ea;border-radius:7px;background:#f5fafc}
+.num{width:.26in;height:.26in;border-radius:50%;background:linear-gradient(135deg,#00b4d8,#48cae4);color:#040f1e;font-family:"Bebas Neue",sans-serif;font-size:12pt;display:flex;align-items:center;justify-content:center;margin-bottom:.07in}
+.step b{display:block;font-size:10.5pt;color:#0a2540;margin-bottom:.02in}
+.step span{display:block;font-size:9pt;color:#3d5470;line-height:1.4}
+table.ref{width:100%;border-collapse:collapse;font-size:9.5pt}
+table.ref th{text-align:left;font-family:"JetBrains Mono",monospace;font-size:7pt;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#5c7690;padding:.05in .08in;border-bottom:1.2px solid #0a2540;vertical-align:bottom}
+table.ref th small{display:block;font-size:6.5pt;letter-spacing:.04em;text-transform:none;color:#8aa0b4}
+table.ref td{padding:.055in .08in;border-bottom:1px solid #e3edf3;font-variant-numeric:tabular-nums}
+table.ref td:first-child{font-weight:700;color:#0a2540}
+table.ref td.m{color:#008fb0}
+table.ref .grp{border-left:1px solid #e3edf3}
+.note{font-size:8pt;color:#5c7690;margin:.06in 0 0}
+.send{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.09in}
+.send div{padding:.1in .12in;border-radius:7px;border:1px solid #9bd8e6;background:#eef9fc;font-size:9pt}
+.send b{display:block;font-family:"JetBrains Mono",monospace;font-size:7pt;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#008fb0;margin-bottom:.03in}
+.send code{font-family:"JetBrains Mono",monospace;font-size:8.3pt;color:#0a2540}
+.portal{margin-top:.12in;padding:.1in .14in;border-radius:7px;border:1px solid #86d9a8;background:#effaf3;font-size:9pt;color:#1f4a33}
+.portal b{color:#0f6b3d}
+.ftr{margin:0 .55in;padding:.16in 0 .28in;display:flex;justify-content:space-between;font-size:8pt;color:#5c7690;border-top:1px solid #e3edf3}
+.ftr b{color:#0a2540}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:.04in .25in}
+.f{border-bottom:1px solid #0a2540;height:.5in;padding-top:.04in;font-size:7.5pt;font-family:"JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:#5c7690}
+.f.wide{grid-column:1/-1}
+.f.tall{height:1.1in}
+.opts{font-family:"DM Sans",sans-serif;letter-spacing:0;text-transform:none;color:#8aa0b4;margin-left:.06in}
+table.idx{width:100%;border-collapse:collapse;margin-top:.04in;font-size:9pt;table-layout:fixed}
+table.idx th{text-align:left;font-family:"JetBrains Mono",monospace;font-size:7pt;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#5c7690;padding:.04in .06in;border-bottom:1.2px solid #0a2540}
+table.idx td{height:.38in;border-bottom:1px solid #b8ccd9;padding:0 .06in}
+table.idx td:first-child{font-family:"JetBrains Mono",monospace;color:#5c7690;font-size:8pt}
+table.idx td + td{border-left:1px solid #e3edf3}
+.room-meta{display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:.04in .22in}
+.body-w{margin-top:.12in;border:1px solid #cfe0ea;border-radius:8px;padding:.06in .14in .1in}
+.body-w-hd{display:flex;align-items:center;gap:.12in}
+.body-w-tag{flex:none;font-family:"Bebas Neue",sans-serif;font-size:12pt;letter-spacing:.08em;color:#008fb0}
+.body-w .fields{grid-template-columns:2fr 1.1fr 1.1fr .9fr;gap:.02in .16in}
+.body-w .f{height:.4in}
+table.rt{width:100%;border-collapse:collapse;margin-top:.06in;font-size:8pt;table-layout:fixed}
+table.rt th{text-align:left;font-family:"JetBrains Mono",monospace;font-size:6.5pt;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5c7690;padding:.03in .05in;border-bottom:1.2px solid #0a2540;vertical-align:bottom}
+table.rt th small{display:block;letter-spacing:0;text-transform:none;color:#8aa0b4}
+table.rt th:nth-child(1){width:.3in}
+table.rt td{height:.27in;border-bottom:1px solid #b8ccd9}
+table.rt td:first-child{font-family:"JetBrains Mono",monospace;color:#5c7690;font-size:7.5pt;padding-left:.05in}
+table.rt td + td{border-left:1px solid #e3edf3}
+.dup{margin-top:.1in;font-size:8pt;color:#5c7690}
+i{font-style:normal}
+</style>
+</head>
+<body>
+
+<!-- Page 1: instructions -->
+<section class="sheet">
+  <div class="hdr">
+    <img src="logo-white.png" alt="AquaRev Water">
+    <div class="hdr-r"><b>Direct Submission Guide</b>Engineering &amp; Contractors</div>
+  </div>
+  <div class="body">
+    <div class="eyebrow">Pump room specifications</div>
+    <h1>Send us your <span>pump room specifications</span></h1>
+    <p class="lede">Use this guide if you are submitting by email instead of the Engineer Portal.</p>
+
+    <h2>What we need</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><b>Pump Room ID</b><span>Name or number each pump room and note where it is in the building.</span></div>
+      <div class="step"><div class="num">2</div><b>Pool assignments</b><span>The pools and spas each pump room serves, with volume and water type.</span></div>
+      <div class="step"><div class="num">3</div><b>Return line specifications</b><span>For each pool: every return line, its pipe size, flow, material and straight run.</span></div>
+    </div>
+
+    <h2>Return line sizing reference</h2>
+    <table class="ref">
+      <thead><tr>
+        <th>Pipe size<small>nominal</small></th>
+        <th>DN<small>metric nominal</small></th>
+        <th class="grp">Measures across<small>outside, inches</small></th>
+        <th>Measures across<small>outside, mm</small></th>
+        <th>Metric pipe stamp<small>PVC, approx.</small></th>
+        <th class="grp">Straight run<small>inches</small></th>
+        <th>Straight run<small>mm</small></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>2&Prime;</td><td>DN50</td><td class="grp">2&frac38;&Prime;</td><td class="m">60 mm</td><td class="m">d63</td><td class="grp">about 28&Prime;</td><td class="m">about 710</td></tr>
+        <tr><td>3&Prime;</td><td>DN80</td><td class="grp">3&frac12;&Prime;</td><td class="m">89 mm</td><td class="m">d90</td><td class="grp">about 32&Prime;</td><td class="m">about 810</td></tr>
+        <tr><td>4&Prime;</td><td>DN100</td><td class="grp">4&frac12;&Prime;</td><td class="m">114 mm</td><td class="m">d110</td><td class="grp">about 36&Prime;</td><td class="m">about 920</td></tr>
+        <tr><td>6&Prime;</td><td>DN150</td><td class="grp">6&frac58;&Prime;</td><td class="m">168 mm</td><td class="m">d160</td><td class="grp">about 48&Prime;</td><td class="m">about 1,220</td></tr>
+        <tr><td>8&Prime;</td><td>DN200</td><td class="grp">8&frac58;&Prime;</td><td class="m">219 mm</td><td class="m">d225</td><td class="grp">ask AquaRev</td><td class="m">&mdash;</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Metric equivalents are approximate. Record pipe sizes exactly as stamped, in inches or mm.</p>
+
+    <h2>How to send it</h2>
+    <div class="send">
+      <div><b>Email to</b><code>water@aquarevwater.us</code></div>
+      <div><b>Subject</b><code>Pump room specifications: [property]</code></div>
+      <div><b>Attach</b>The completed form, plus photos and a walkthrough video of each pump room. Large files: share a link.</div>
+    </div>
+    <div class="portal"><b>Prefer the Engineer Portal?</b> Capture and send everything from your phone at aquarevwater.us/calculator. To request access, email water@aquarevwater.us with your name, company, property and mobile number.</div>
+    <div class="notes"><div class="notes-l">Notes</div><div class="notes-ln"></div><div class="notes-ln"></div><div class="notes-ln"></div></div>
+  </div>
+  <div class="ftr"><span><b>Questions on site?</b> (832) 979-6758 &middot; water@aquarevwater.us</span><span>aquarevwater.us/engineering &middot; Page <i data-pg>1</i> of <i data-pgs>3</i></span></div>
+</section>
+
+<!-- Page 2: property and contact cover -->
+<section class="sheet">
+  <div class="hdr">
+    <img src="logo-white.png" alt="AquaRev Water">
+    <div class="hdr-r"><b>Submission Form</b>Property &amp; contact</div>
+  </div>
+  <div class="body">
+    <div class="eyebrow">Submission form</div>
+    <h1>Property <span>&amp; contact</span></h1>
+    <div class="fields">
+      <div class="f wide">Property name</div>
+      <div class="f wide">Property address</div>
+      <div class="f">Your name</div>
+      <div class="f">Role</div>
+      <div class="f">Company</div>
+      <div class="f">Date of visit</div>
+      <div class="f">Mobile</div>
+      <div class="f">Email</div>
+      <div class="f">Pipe sizes marked in<span class="opts">&#9744; inches &nbsp; &#9744; mm</span></div>
+      <div class="f">Number of pump rooms</div>
+    </div>
+
+    <h2>Pump rooms at this property</h2>
+    <table class="idx">
+      <thead><tr><th style="width:.45in">Page</th><th style="width:1.6in">Pump Room ID</th><th style="width:1.9in">Location</th><th>Pools and spas served</th></tr></thead>
+      <tbody data-index></tbody>
+    </table>
+
+    <div class="notes"><div class="notes-l">Notes</div><div class="notes-ln"></div><div class="notes-ln"></div><div class="notes-ln"></div></div>
+  </div>
+  <div class="ftr"><span><b>Send to</b> water@aquarevwater.us &middot; Subject: Pump room specifications: [property]</span><span>Page <i data-pg>2</i> of <i data-pgs>3</i></span></div>
+</section>
+
+<!-- Page 3+: one Pump Room profile per pump room (cloned by the script below) -->
+<section class="sheet" data-room>
+  <div class="hdr">
+    <img src="logo-white.png" alt="AquaRev Water">
+    <div class="hdr-r"><b>Pump Room Profile</b>Pump room <i data-n>1</i> of <i data-of>1</i></div>
+  </div>
+  <div class="body">
+    <div class="eyebrow">Pump room <span data-n>1</span> of <span data-of>1</span></div>
+    <h1>Pump room <span>profile</span></h1>
+    <div class="room-meta">
+      <div class="f">Pump Room ID</div>
+      <div class="f">Location in building</div>
+      <div class="f">Pools &amp; spas served</div>
+    </div>
+
+    <div class="body-w">
+      <div class="body-w-hd"><span class="body-w-tag">Body of water A</span></div>
+      <div class="fields"><div class="f">Pool / spa name</div><div class="f">Volume<span class="opts">gal / m&sup3;</span></div><div class="f">Water type</div><div class="f">No. of returns</div></div>
+      <table class="rt"><thead><tr><th>#</th><th>Pipe size<small>in or mm</small></th><th>Flow<small>gpm or m&sup3;/h</small></th><th>Material<small>PVC, CPVC, steel</small></th><th>Straight run<small>available</small></th></tr></thead>
+        <tbody><tr><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+    </div>
+    <div class="body-w">
+      <div class="body-w-hd"><span class="body-w-tag">Body of water B</span></div>
+      <div class="fields"><div class="f">Pool / spa name</div><div class="f">Volume<span class="opts">gal / m&sup3;</span></div><div class="f">Water type</div><div class="f">No. of returns</div></div>
+      <table class="rt"><thead><tr><th>#</th><th>Pipe size<small>in or mm</small></th><th>Flow<small>gpm or m&sup3;/h</small></th><th>Material<small>PVC, CPVC, steel</small></th><th>Straight run<small>available</small></th></tr></thead>
+        <tbody><tr><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+    </div>
+    <div class="body-w">
+      <div class="body-w-hd"><span class="body-w-tag">Body of water C</span></div>
+      <div class="fields"><div class="f">Pool / spa name</div><div class="f">Volume<span class="opts">gal / m&sup3;</span></div><div class="f">Water type</div><div class="f">No. of returns</div></div>
+      <table class="rt"><thead><tr><th>#</th><th>Pipe size<small>in or mm</small></th><th>Flow<small>gpm or m&sup3;/h</small></th><th>Material<small>PVC, CPVC, steel</small></th><th>Straight run<small>available</small></th></tr></thead>
+        <tbody><tr><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+    </div>
+    <p class="dup">More than three pools or spas in this room? Duplicate this page.</p>
+    <div class="notes"><div class="notes-l">Notes</div><div class="notes-ln"></div><div class="notes-ln"></div><div class="notes-ln"></div></div>
+  </div>
+  <div class="ftr"><span><b>Send to</b> water@aquarevwater.us &middot; Subject: Pump room specifications: [property]</span><span>Page <i data-pg>3</i> of <i data-pgs>3</i></span></div>
+</section>
+
+<script>
+// ?rooms=N builds N Pump Room Profile pages and numbers every page.
+(function(){
+  var n = parseInt(new URLSearchParams(location.search).get('rooms'), 10);
+  n = Math.max(1, Math.min(10, isNaN(n) ? 1 : n));
+  var tpl = document.querySelector('[data-room]');
+  for(var i = 2; i <= n; i++){
+    var c = tpl.cloneNode(true);
+    c.querySelectorAll('[data-n]').forEach(function(e){ e.textContent = i; });
+    document.body.insertBefore(c, document.querySelector('script'));
+  }
+  document.querySelectorAll('[data-of]').forEach(function(e){ e.textContent = n; });
+  var sheets = document.querySelectorAll('.sheet'), total = sheets.length;
+  sheets.forEach(function(s, k){
+    var pg = s.querySelector('[data-pg]'); if(pg) pg.textContent = k + 1;
+    var pgs = s.querySelector('[data-pgs]'); if(pgs) pgs.textContent = total;
+  });
+  var idx = document.querySelector('[data-index]'), rows = Math.max(n, 4), html = '';
+  for(var r = 1; r <= rows; r++) html += '<tr><td>' + (r <= n ? r + 2 : '') + '</td><td></td><td></td><td></td></tr>';
+  idx.innerHTML = html;
+})();
+</script>
+</body>
+</html>

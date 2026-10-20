@@ -4,51 +4,108 @@ var root=document.getElementById('aren'); if(!root) return;
 root.innerHTML=`
 <div class="page">
 
-<div class="en-eyebrow"><i></i>Engineering &amp; Contractors</div>
-<h1 class="en-h1">Welcome to AquaRev Water&rsquo;s <span>Engineering &amp; Contractors page.</span></h1>
-<p class="en-lede">Your property has asked AquaRev Water to confirm how its pools and spas are set up. Start with this short guide: it shows what to capture in the pump room and how to send it to us.</p>
+<section class="ae-card">
+  <div class="ae-eyebrow">Engineering &amp; Contractors</div>
+  <h1 class="ae-h1">AquaRev Water&rsquo;s <span>Engineering &amp; Contractors</span> Introduction</h1>
+  <p class="ae-lede">Welcome to AquaRev Water. We need to confirm technical information about your property&rsquo;s pools and spas. This short guide shows what to capture in the pump room and how to send it to us.</p>
 
-<div class="en-video is-pending" id="guide" data-video>
-  <img src="https://jeffatley-web.github.io/aquarev_engineering/img/guide-poster.jpg" alt="Pump Room Specifications Guide for AquaRev Water devices" width="1600" height="900">
-  <div class="en-video-shade"></div>
-  <button class="en-play" type="button" data-video-play aria-label="Play the Pump Room Specifications Guide">
-    <span class="en-play-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
-    <span class="en-play-live">Watch the guide</span><span class="en-play-soon">Video publishing soon</span>
-    <span class="en-play-time">3:49</span>
-  </button>
-</div>
-
-<div class="en-hd">
-  <h2 class="en-h2">What we need from you</h2>
-  <p>One visit to the pump room. Nothing is cut or shut down.</p>
-</div>
-<ol class="en-need">
-  <li><div class="en-num">1</div><div><h3>Walk the pump room</h3><p>A short video, from the pumps to the return lines.</p></div></li>
-  <li><div class="en-num">2</div><div><h3>Confirm each pool</h3><p>Volume and water type. We&rsquo;ve estimated them; you confirm.</p></div></li>
-  <li><div class="en-num">3</div><div><h3>Size the returns</h3><p>Count the return lines. Note each pipe size, with a photo.</p></div></li>
-  <li><div class="en-num">4</div><div><h3>Send it to us</h3><p>Through the Engineer Portal, or by email.</p></div></li>
-</ol>
-
-<div class="en-go">
-  <div>
-    <h2 class="en-h2">Ready to start?</h2>
-    <p>Your AquaRev rep sets up your portal access, with step-by-step help along the way. Questions? Call <a href="tel:+18329796758">(832) 979-6758</a>.</p>
+  <div class="ae-video is-pending" data-video>
+    <img src="https://jeffatley-web.github.io/aquarev_engineering/img/guide-poster.jpg" alt="Pump Room Specifications Guide for AquaRev Water devices" width="1600" height="900">
+    <div class="ae-video-shade"></div>
+    <button class="ae-play" type="button" data-video-play aria-label="Play the Pump Room Specifications Guide">
+      <span class="ae-play-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
+      <span class="ae-play-live">Watch the guide</span><span class="ae-play-soon">Video publishing soon</span>
+      <span class="ae-play-time">3:49</span>
+    </button>
   </div>
-  <div class="en-ctas">
-    <a class="en-btn en-btn-primary" href="https://www.aquarevwater.us/calculator" target="_blank" rel="noopener">Open the Engineer Portal
+
+  <h2 class="ae-hd">What we need to verify your property&rsquo;s specifications</h2>
+  <ol class="ae-need">
+    <li><div class="ae-num">1</div><div><b>Review your pump room</b><span>Ideally, provide a short video and images of the pumps and return lines.</span></div></li>
+    <li><div class="ae-num">2</div><div><b>Confirm each pool profile</b><span>Volume and water type.</span></div></li>
+    <li><div class="ae-num">3</div><div><b>Confirm return lines</b><span>Sizes, counts, flow rates and spans.</span></div></li>
+    <li><div class="ae-num">4</div><div><b>Submit to AquaRev</b><span>Through the Engineer Portal, or directly by email.</span></div></li>
+  </ol>
+  <p class="ae-foot">One visit to the pump room. Nothing is cut, changed or shut down.</p>
+</section>
+
+<section class="ae-band ae-go">
+  <div class="ae-band-l">
+    <div class="ae-band-eyebrow">Recommended</div>
+    <div class="ae-band-title">Submit through the Engineer Portal</div>
+    <p class="ae-band-sub">Update and submit your property details instantly, including photos or video, through our portal. Your AquaRev rep is notified automatically. No account yet? Request access and we&rsquo;ll set you up.</p>
+  </div>
+  <div class="ae-band-ctas">
+    <a class="ae-btn ae-btn-green" href="https://www.aquarevwater.us/calculator" target="_blank" rel="noopener">Open the Engineer Portal
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-    <a class="en-btn en-btn-ghost" href="mailto:water@AquaRevWater.us?subject=Pump%20room%20specifications">Email AquaRev</a>
+    <a class="ae-btn" href="mailto:water@aquarevwater.us" data-mail="access">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Request portal access</a>
+  </div>
+</section>
+
+<section class="ae-band ae-direct">
+  <div class="ae-band-l">
+    <div class="ae-band-eyebrow">Prefer email?</div>
+    <div class="ae-band-title">Submit directly to AquaRev</div>
+    <p class="ae-band-sub">Download the submission guide, complete a Pump Room Profile for each pump room, and email it with your photos and video to <b>water@aquarevwater.us</b>.</p>
+  </div>
+  <div class="ae-band-ctas">
+    <a class="ae-btn ae-btn-aqua" href="https://jeffatley-web.github.io/aquarev_engineering/docs/AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download submission guide</a>
+    <a class="ae-btn" href="mailto:water@aquarevwater.us" data-mail="summary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email a summary</a>
+    <button class="ae-btn" type="button" data-copy-template>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy email template</button>
+  </div>
+</section>
+
+<div class="ae-res-hd">
+  <h2>Resources</h2>
+  <p>Technical references for planning and installation.</p>
+</div>
+<nav class="ae-res" aria-label="Engineering resources">
+  <a class="ae-link" href="https://www.aquarevwater.us/specifications" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>
+    <span>Installation Specifications<small>Device data, flow, clearances</small></span></a>
+  <a class="ae-link" href="https://www.aquarevwater.us/drawings" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg>
+    <span>Installation Drawings<small>Plan, flow diagram, details</small></span></a>
+  <a class="ae-link" href="https://www.aquarevwater.us/data" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+    <span>Technology &amp; Data<small>Lab reports, white paper</small></span></a>
+  <a class="ae-link" href="https://www.aquarevwater.us/certificationmap" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+    <span>Certifications<small>NSF/ANSI 50, compliance map</small></span></a>
+  <a class="ae-link" href="https://jeffatley-web.github.io/aquarev_engineering/docs/AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15l3 3 3-3"/></svg>
+    <span>Direct Submission Guide<small>PDF &middot; Checklist + form</small></span></a>
+  <div class="ae-contact">
+    <b>Questions on site?</b>
+    <a href="tel:+18329796758">(832) 979-6758</a>
+    <a href="mailto:water@aquarevwater.us">water@aquarevwater.us</a>
+  </div>
+</nav>
+
+<div class="ae-modal" data-modal hidden>
+  <div class="ae-modal-card" role="dialog" aria-modal="true" aria-labelledby="ae-modal-title">
+    <button class="ae-modal-x" type="button" data-modal-close aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="ae-eyebrow">Direct Submission Guide</div>
+    <div class="ae-modal-title" id="ae-modal-title">How many pump rooms?</div>
+    <p class="ae-modal-sub">We&rsquo;ll build your form with one Pump Room Profile page for each.</p>
+    <div class="ae-stepper">
+      <button type="button" data-step="-1" aria-label="Fewer pump rooms">&minus;</button>
+      <output data-rooms aria-live="polite">1</output>
+      <button type="button" data-step="1" aria-label="More pump rooms">+</button>
+    </div>
+    <div class="ae-modal-sum" data-sum><b>3 pages</b> &middot; guide, contact page and 1 pump room</div>
+    <a class="ae-btn ae-btn-aqua ae-modal-go" href="https://jeffatley-web.github.io/aquarev_engineering/docs/AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide-go target="_blank" rel="noopener" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download guide</a>
+    <p class="ae-modal-note">More than 10 pump rooms? Choose 10 and duplicate a Pump Room Profile page.</p>
   </div>
 </div>
 
-<div class="en-refs">
-  <span class="en-refs-label">References</span>
-  <a class="en-ref" href="https://www.aquarevwater.us/specifications" target="_blank" rel="noopener">Specifications<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-  <a class="en-ref" href="https://www.aquarevwater.us/drawings" target="_blank" rel="noopener">Installation Drawings<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-  <a class="en-ref" href="https://www.aquarevwater.us/data" target="_blank" rel="noopener">Technology &amp; Data<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-</div>
-
-<div class="en-toast" role="status" aria-live="polite" data-toast></div>
+<div class="ae-toast" role="status" aria-live="polite" data-toast></div>
 </div>
 `;
 (function(){
@@ -65,6 +122,44 @@ root.innerHTML=`
   // ── Guide video. Paste the YouTube id once the video is published.
   var GUIDE = { youtubeId: '' };
 
+  var MAIL = 'water@aquarevwater.us';
+  var ACCESS = {
+    subject: 'Engineer Portal access request',
+    body: [
+      'Please set up Engineer Portal access for me.',
+      '',
+      'Name:',
+      'Company and role:',
+      'Property:',
+      'Mobile number (used to sign in):',
+      'AquaRev contact, if known:'
+    ].join('\n')
+  };
+  var SUMMARY = [
+    'Property:',
+    'Your name, role and mobile:',
+    'Pipe sizes marked in (inches or mm):',
+    '',
+    'POOL / SPA 1',
+    '  Name:',
+    '  Volume (gallons or m3):',
+    '  Water type:',
+    '  Return lines (count and size of each):',
+    '  Straight pipe available on the return:',
+    '  Pipe material:',
+    '  Pump room it is served from:',
+    '',
+    '(Copy the block above for each pool and spa.)',
+    '',
+    'Photos and video: attached, or shared-drive link:',
+    '',
+    'Notes (splits, tight runs, anything unusual):'
+  ].join('\n');
+
+  function mailto(subject, body){ return 'mailto:' + MAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); }
+  var a1 = R.querySelector('[data-mail="access"]'); if(a1) a1.href = mailto(ACCESS.subject, ACCESS.body);
+  var a2 = R.querySelector('[data-mail="summary"]'); if(a2) a2.href = mailto('Pump room specifications: [property name]', SUMMARY);
+
   var video = R.querySelector('[data-video]');
   var live = !!GUIDE.youtubeId;
   if(live) video.classList.remove('is-pending');
@@ -72,17 +167,70 @@ root.innerHTML=`
     var pb = R.querySelector('[data-video-play]');
     if(pb){ pb.setAttribute('aria-disabled', 'true'); pb.setAttribute('aria-label', 'Video publishing soon'); }
   }
+
   R.addEventListener('click', function(e){
-    if(!e.target.closest('[data-video-play]')) return;
-    if(!live){ toast('The guide is publishing soon. Questions? Call (832) 979-6758.'); return; }
-    var f = document.createElement('iframe');
-    f.title = 'Pump Room Specifications Guide';
-    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-    f.setAttribute('allowfullscreen', '');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + GUIDE.youtubeId + '?autoplay=1&rel=0&modestbranding=1';
-    video.innerHTML = '';
-    video.appendChild(f);
+    if(e.target.closest('[data-video-play]')){
+      if(!live){ toast('The guide is publishing soon. Questions? Call (832) 979-6758.'); return; }
+      var f = document.createElement('iframe');
+      f.title = 'Pump Room Specifications Guide';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.setAttribute('allowfullscreen', '');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + GUIDE.youtubeId + '?autoplay=1&rel=0&modestbranding=1';
+      video.innerHTML = '';
+      video.appendChild(f);
+      return;
+    }
+    if(e.target.closest('[data-copy-template]')){ copyTemplate(); return; }
+    var g = e.target.closest('[data-guide]');
+    if(g){ e.preventDefault(); openGuide(g); return; }
+    if(e.target.closest('[data-modal-close]') || e.target === modal){ closeGuide(); return; }
+    var st = e.target.closest('[data-step]');
+    if(st){ setRooms(rooms + parseInt(st.getAttribute('data-step'), 10)); return; }
+    if(e.target.closest('[data-guide-go]')) setTimeout(closeGuide, 150);
   });
+
+  // ── Submission guide pop-up: pick 1–10 pump rooms; each count is a pre-rendered PDF in docs/.
+  var modal = R.querySelector('[data-modal]'), rooms = 1, guideBase = '', lastFocus = null;
+  function guideFile(n){ return n === 1 ? 'AquaRev_Submission_Guide_1_Pump_Room.pdf' : 'AquaRev_Submission_Guide_' + n + '_Pump_Rooms.pdf'; }
+  function setRooms(n){
+    rooms = Math.max(1, Math.min(10, n));
+    R.querySelector('[data-rooms]').textContent = rooms;
+    R.querySelector('[data-step="-1"]').disabled = rooms === 1;
+    R.querySelector('[data-step="1"]').disabled = rooms === 10;
+    R.querySelector('[data-sum]').innerHTML = '<b>' + (rooms + 2) + ' pages</b> &middot; guide, contact page and ' + rooms + ' pump room' + (rooms > 1 ? 's' : '');
+    R.querySelector('[data-guide-go]').href = guideBase + guideFile(rooms);
+  }
+  function openGuide(link){
+    guideBase = link.href.replace(/[^\/]*$/, '');
+    lastFocus = link;
+    setRooms(rooms);
+    modal.hidden = false;
+    R.querySelector('[data-step="1"]').focus();
+    document.addEventListener('keydown', onKey);
+  }
+  function closeGuide(){
+    if(modal.hidden) return;
+    modal.hidden = true;
+    document.removeEventListener('keydown', onKey);
+    if(lastFocus) lastFocus.focus();
+  }
+  function onKey(e){
+    if(e.key === 'Escape') closeGuide();
+    else if(e.key === 'ArrowUp' || e.key === 'ArrowRight'){ e.preventDefault(); setRooms(rooms + 1); }
+    else if(e.key === 'ArrowDown' || e.key === 'ArrowLeft'){ e.preventDefault(); setRooms(rooms - 1); }
+  }
+
+  function copyTemplate(){
+    function done(){ toast('Template copied. Paste it into an email to ' + MAIL + '.'); }
+    function fallback(){
+      var ta = document.createElement('textarea'); ta.value = SUMMARY; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch(err){ toast('Copy failed. Use Email a summary instead.'); }
+      document.body.removeChild(ta);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(SUMMARY).then(done, fallback);
+    else fallback();
+  }
 
   var tEl = R.querySelector('[data-toast]'), tTimer;
   function toast(msg){
