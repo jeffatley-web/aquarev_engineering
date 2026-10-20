@@ -15,7 +15,7 @@ root.innerHTML=`
     <button class="ae-play" type="button" data-video-play aria-label="Play the Pump Room Specifications Guide">
       <span class="ae-play-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
       <span class="ae-play-live">Watch the guide</span><span class="ae-play-soon">Video publishing soon</span>
-      <span class="ae-play-time">4:50</span>
+      <span class="ae-play-time">4:49</span>
     </button>
   </div>
 
@@ -118,7 +118,7 @@ root.innerHTML=`
   var R = document.getElementById('aren') || document.body;
 
   // ── Guide video. Paste the YouTube id once the video is published.
-  var GUIDE = { youtubeId: 'WSPnO5VhQOc' };
+  var GUIDE = { youtubeId: '979kyf0n1gs' };
 
   var MAIL = 'water@aquarevwater.us';
   var ACCESS = {
