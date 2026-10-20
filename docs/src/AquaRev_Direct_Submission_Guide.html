@@ -59,6 +59,9 @@ table.idx td + td{border-left:1px solid #e3edf3}
 .body-w{margin-top:.12in;border:1px solid #cfe0ea;border-radius:8px;padding:.06in .14in .1in}
 .body-w-hd{display:flex;align-items:center;gap:.12in}
 .body-w-tag{flex:none;font-family:"Bebas Neue",sans-serif;font-size:12pt;letter-spacing:.08em;color:#008fb0}
+.meter{margin-left:auto;display:flex;align-items:center;gap:.12in;font-family:"JetBrains Mono",monospace;font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase;color:#5c7690}
+.meter span{display:inline-flex;align-items:center;gap:.05in;font-family:"DM Sans",sans-serif;font-size:8.5pt;letter-spacing:0;text-transform:none;color:#16263d}
+.meter span:before{content:"";width:.12in;height:.12in;border:1.2px solid #0a2540;border-radius:2px}
 .body-w .fields{grid-template-columns:2fr 1.1fr 1.1fr .9fr;gap:.02in .16in}
 .body-w .f{height:.4in}
 table.rt{width:100%;border-collapse:collapse;margin-top:.06in;font-size:8pt;table-layout:fixed}
@@ -88,7 +91,7 @@ i{font-style:normal}
     <h2>What we need</h2>
     <div class="steps">
       <div class="step"><div class="num">1</div><b>Pump Room ID</b><span>Name or number each pump room and note where it is in the building.</span></div>
-      <div class="step"><div class="num">2</div><b>Pool assignments</b><span>The pools and spas each pump room serves, with volume and water type.</span></div>
+      <div class="step"><div class="num">2</div><b>Pool assignments</b><span>The pools and spas each pump room serves, with volume, water type and whether a replacement water sub-meter is fitted.</span></div>
       <div class="step"><div class="num">3</div><b>Return line specifications</b><span>For each pool: every return line, its pipe size, flow, material and straight run.</span></div>
     </div>
 
@@ -174,19 +177,19 @@ i{font-style:normal}
     </div>
 
     <div class="body-w">
-      <div class="body-w-hd"><span class="body-w-tag">Body of water A</span></div>
+      <div class="body-w-hd"><span class="body-w-tag">Body of water A</span><div class="meter">Replacement water sub-meter<span>Yes</span><span>No</span></div></div>
       <div class="fields"><div class="f">Pool / spa name</div><div class="f">Volume<span class="opts">gal / m&sup3;</span></div><div class="f">Water type</div><div class="f">No. of returns</div></div>
       <table class="rt"><thead><tr><th>#</th><th>Pipe size<small>in or mm</small></th><th>Flow<small>gpm or m&sup3;/h</small></th><th>Material<small>PVC, CPVC, steel</small></th><th>Straight run<small>available</small></th></tr></thead>
         <tbody><tr><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td></tr></tbody></table>
     </div>
     <div class="body-w">
-      <div class="body-w-hd"><span class="body-w-tag">Body of water B</span></div>
+      <div class="body-w-hd"><span class="body-w-tag">Body of water B</span><div class="meter">Replacement water sub-meter<span>Yes</span><span>No</span></div></div>
       <div class="fields"><div class="f">Pool / spa name</div><div class="f">Volume<span class="opts">gal / m&sup3;</span></div><div class="f">Water type</div><div class="f">No. of returns</div></div>
       <table class="rt"><thead><tr><th>#</th><th>Pipe size<small>in or mm</small></th><th>Flow<small>gpm or m&sup3;/h</small></th><th>Material<small>PVC, CPVC, steel</small></th><th>Straight run<small>available</small></th></tr></thead>
         <tbody><tr><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td></tr></tbody></table>
     </div>
     <div class="body-w">
-      <div class="body-w-hd"><span class="body-w-tag">Body of water C</span></div>
+      <div class="body-w-hd"><span class="body-w-tag">Body of water C</span><div class="meter">Replacement water sub-meter<span>Yes</span><span>No</span></div></div>
       <div class="fields"><div class="f">Pool / spa name</div><div class="f">Volume<span class="opts">gal / m&sup3;</span></div><div class="f">Water type</div><div class="f">No. of returns</div></div>
       <table class="rt"><thead><tr><th>#</th><th>Pipe size<small>in or mm</small></th><th>Flow<small>gpm or m&sup3;/h</small></th><th>Material<small>PVC, CPVC, steel</small></th><th>Straight run<small>available</small></th></tr></thead>
         <tbody><tr><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td></tr></tbody></table>

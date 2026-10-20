@@ -50,7 +50,7 @@ root.innerHTML=`
     <p class="ae-band-sub">Download the submission guide, complete a Pump Room Profile for each pump room, and email it with your photos and video to <b>water@aquarevwater.us</b>.</p>
   </div>
   <div class="ae-band-ctas">
-    <a class="ae-btn ae-btn-aqua" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad6bd1c3ab5b2b1d428de70_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
+    <a class="ae-btn ae-btn-aqua" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad7a327151e7bd2fffd0778_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download Submission Template</a>
     <a class="ae-btn" href="mailto:water@aquarevwater.us" data-mail="summary">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email a summary</a>
@@ -76,7 +76,7 @@ root.innerHTML=`
   <a class="ae-link" href="https://www.aquarevwater.us/certificationmap" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
     <span>Certifications<small>NSF/ANSI 50, compliance map</small></span></a>
-  <a class="ae-link" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad6bd1c3ab5b2b1d428de70_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
+  <a class="ae-link" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad7a327151e7bd2fffd0778_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15l3 3 3-3"/></svg>
     <span>Direct Submission Guide<small>PDF &middot; Checklist + form</small></span></a>
   <div class="ae-contact">
@@ -99,7 +99,7 @@ root.innerHTML=`
       <button type="button" data-step="1" aria-label="More pump rooms">+</button>
     </div>
     <div class="ae-modal-sum" data-sum><b>3 pages</b> &middot; guide, contact page and 1 pump room</div>
-    <a class="ae-btn ae-btn-aqua ae-modal-go" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad6bd1c3ab5b2b1d428de70_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide-go target="_blank" rel="noopener" download>
+    <a class="ae-btn ae-btn-aqua ae-modal-go" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad7a327151e7bd2fffd0778_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide-go target="_blank" rel="noopener" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download guide</a>
     <p class="ae-modal-note">More than 10 pump rooms? Choose 10 and duplicate a Pump Room Profile page.</p>
   </div>
@@ -141,6 +141,7 @@ root.innerHTML=`
     '  Name:',
     '  Volume (gallons or m3):',
     '  Water type:',
+    '  Replacement water sub-meter (Yes / No):',
     '  Return lines (count and size of each):',
     '  Straight pipe available on the return:',
     '  Pipe material:',
@@ -172,16 +173,16 @@ root.innerHTML=`
   //    when a guide is replaced, swap its URL here too.
   var CDN = 'https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/';
   var GUIDE_PDFS = [
-    '6ad6bd1c3ab5b2b1d428de70_AquaRev_Submission_Guide_1_Pump_Room.pdf',
-    '6ad6bd1d7d6d24f64bf1e2ec_AquaRev_Submission_Guide_2_Pump_Rooms.pdf',
-    '6ad6bd1dfdd97080fd20c0c5_AquaRev_Submission_Guide_3_Pump_Rooms.pdf',
-    '6ad6bd1dacd587b07e5d2525_AquaRev_Submission_Guide_4_Pump_Rooms.pdf',
-    '6ad6bd1eab16f72ba6ddd17f_AquaRev_Submission_Guide_5_Pump_Rooms.pdf',
-    '6ad6bd1e953f1c457dabb70e_AquaRev_Submission_Guide_6_Pump_Rooms.pdf',
-    '6ad6bd1f1ddb03d942a67913_AquaRev_Submission_Guide_7_Pump_Rooms.pdf',
-    '6ad6bd1f57b32ea2ac754e06_AquaRev_Submission_Guide_8_Pump_Rooms.pdf',
-    '6ad6bd1f605a8d9adb333ba0_AquaRev_Submission_Guide_9_Pump_Rooms.pdf',
-    '6ad6bd202d6e27cdba247b8d_AquaRev_Submission_Guide_10_Pump_Rooms.pdf'
+    '6ad7a327151e7bd2fffd0778_AquaRev_Submission_Guide_1_Pump_Room.pdf',
+    '6ad7a32709bb356f1c4f4966_AquaRev_Submission_Guide_2_Pump_Rooms.pdf',
+    '6ad7a32826994214b117f34f_AquaRev_Submission_Guide_3_Pump_Rooms.pdf',
+    '6ad7a32829fc42c9be395544_AquaRev_Submission_Guide_4_Pump_Rooms.pdf',
+    '6ad7a328f0bd70ccc321dd9f_AquaRev_Submission_Guide_5_Pump_Rooms.pdf',
+    '6ad7a3285374ff4a90919894_AquaRev_Submission_Guide_6_Pump_Rooms.pdf',
+    '6ad7a32829fc42c9be39557a_AquaRev_Submission_Guide_7_Pump_Rooms.pdf',
+    '6ad7a328b2e3d7e0ef9b9d54_AquaRev_Submission_Guide_8_Pump_Rooms.pdf',
+    '6ad7a3289990314f9b47d938_AquaRev_Submission_Guide_9_Pump_Rooms.pdf',
+    '6ad7a3297ff729f486195c11_AquaRev_Submission_Guide_10_Pump_Rooms.pdf'
   ];
   var modal = R.querySelector('[data-modal]'), rooms = 1, lastFocus = null;
   function setRooms(n){
