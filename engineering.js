@@ -6,7 +6,7 @@ root.innerHTML=`
 
 <section class="ae-card">
   <div class="ae-eyebrow">Engineering &amp; Contractors</div>
-  <h1 class="ae-h1">AquaRev Water&rsquo;s <span>Engineering &amp; Contractors</span> Introduction</h1>
+  <h1 class="ae-h1"><span>Engineering &amp; Contractors</span> Introduction</h1>
   <p class="ae-lede">Welcome to AquaRev Water. We need to confirm technical information about your property&rsquo;s pools and spas. This short guide shows what to capture in the pump room and how to send it to us.</p>
 
   <div class="ae-video is-pending" data-video>
@@ -25,9 +25,7 @@ root.innerHTML=`
     <li><div class="ae-num">2</div><div><b>Confirm each pool profile</b><span>Volume and water type.</span></div></li>
     <li><div class="ae-num">3</div><div><b>Confirm return lines</b><span>Sizes, counts, flow rates and spans.</span></div></li>
     <li><div class="ae-num">4</div><div><b>Submit to AquaRev</b><span>Through the Engineer Portal, or directly by email.</span></div></li>
-  </ol>
-  <p class="ae-foot">One visit to the pump room. Nothing is cut, changed or shut down.</p>
-</section>
+  </ol></section>
 
 <section class="ae-band ae-go">
   <div class="ae-band-l">
