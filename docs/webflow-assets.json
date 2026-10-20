@@ -15,8 +15,6 @@
     "9":  { "id": "6ad7a3289990314f9b47d938", "md5": "4f02532d246776c15e74afeb42e0653f", "url": "https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad7a3289990314f9b47d938_AquaRev_Submission_Guide_9_Pump_Rooms.pdf" },
     "10": { "id": "6ad7a3297ff729f486195c11", "md5": "c15009c739bf2f8782b13bbc7a42c971", "url": "https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad7a3297ff729f486195c11_AquaRev_Submission_Guide_10_Pump_Rooms.pdf" }
   },
-  "superseded_pending_delete": [
-    "6ad6bd1c3ab5b2b1d428de70", "6ad6bd1d7d6d24f64bf1e2ec", "6ad6bd1dfdd97080fd20c0c5", "6ad6bd1dacd587b07e5d2525", "6ad6bd1eab16f72ba6ddd17f",
-    "6ad6bd1e953f1c457dabb70e", "6ad6bd1f1ddb03d942a67913", "6ad6bd1f57b32ea2ac754e06", "6ad6bd1f605a8d9adb333ba0", "6ad6bd202d6e27cdba247b8d"
-  ]
+  "superseded_deleted": "2026-10-20: the ten 6ad6bd… assets (pre sub-meter) were deleted after the live page switched over.",
+  "other_assets_in_folder": "AquaRev_Installation_Specifications_V1.pdf, AquaRev_Installation_Drawing_Set_V1.pdf, AquaRev_Implementation_Guide_V1.pdf were uploaded separately (2026-10-20 01:52) and are not managed by this page."
 }
