@@ -16,14 +16,9 @@ root.innerHTML=`
 </header>
 
 <section class="ae-card ae-card-guide" id="ae-guide">
-  <div class="ae-video is-pending" data-video>
-    <img src="https://jeffatley-web.github.io/aquarev_engineering/img/guide-poster.jpg" alt="Pump Room Specifications Guide for AquaRev Water devices" width="1600" height="900">
-    <div class="ae-video-shade"></div>
-    <button class="ae-play" type="button" data-video-play aria-label="Play the Pump Room Specifications Guide">
-      <span class="ae-play-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
-      <span class="ae-play-live">Watch the guide</span><span class="ae-play-soon">Video publishing soon</span>
-      <span class="ae-play-time">4:49</span>
-    </button>
+  <div class="ae-video">
+    <!-- Guide video: YouTube DJ4vA-yBOg8. To change it, replace the id in this src. -->
+    <iframe src="https://www.youtube-nocookie.com/embed/DJ4vA-yBOg8?rel=0&amp;modestbranding=1" title="Pump Room Specification Guide for engineers" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 
   <h2 class="ae-hd">What we need to verify your property&rsquo;s specifications</h2>
@@ -56,7 +51,7 @@ root.innerHTML=`
   </div>
   <div class="ae-band-ctas">
     <a class="ae-btn ae-btn-aqua" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad6bd1c3ab5b2b1d428de70_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download submission guide</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download Submission Template</a>
     <a class="ae-btn" href="mailto:water@aquarevwater.us" data-mail="summary">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email a summary</a>
     <button class="ae-btn" type="button" data-copy-template>
@@ -124,9 +119,6 @@ root.innerHTML=`
 (function(){
   var R = document.getElementById('aren') || document.body;
 
-  // ── Guide video. Paste the YouTube id once the video is published.
-  var GUIDE = { youtubeId: 'DJ4vA-yBOg8' };
-
   var MAIL = 'water@aquarevwater.us';
   var ACCESS = {
     subject: 'Engineer Portal access request',
@@ -165,27 +157,7 @@ root.innerHTML=`
   var a1 = R.querySelector('[data-mail="access"]'); if(a1) a1.href = mailto(ACCESS.subject, ACCESS.body);
   var a2 = R.querySelector('[data-mail="summary"]'); if(a2) a2.href = mailto('Pump room specifications: [property name]', SUMMARY);
 
-  var video = R.querySelector('[data-video]');
-  var live = !!GUIDE.youtubeId;
-  if(live) video.classList.remove('is-pending');
-  else {
-    var pb = R.querySelector('[data-video-play]');
-    if(pb){ pb.setAttribute('aria-disabled', 'true'); pb.setAttribute('aria-label', 'Video publishing soon'); }
-  }
-
-  function playVideo(){
-    if(!live){ toast('The guide is publishing soon. Questions? Call (832) 979-6758.'); return; }
-    if(video.querySelector('iframe')) return;
-    var f = document.createElement('iframe');
-    f.title = 'Pump Room Specifications Guide';
-    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-    f.setAttribute('allowfullscreen', '');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + GUIDE.youtubeId + '?autoplay=1&rel=0&modestbranding=1';
-    video.innerHTML = '';
-    video.appendChild(f);
-  }
   R.addEventListener('click', function(e){
-    if(e.target.closest('[data-video-play]')){ playVideo(); return; }
     if(e.target.closest('[data-copy-template]')){ copyTemplate(); return; }
     var g = e.target.closest('[data-guide]');
     if(g){ e.preventDefault(); openGuide(g); return; }

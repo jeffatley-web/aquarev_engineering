@@ -43,17 +43,7 @@
 #aren .ae-card-guide .ae-hd:first-of-type{margin-top:24px}
 #aren .ae-lede{margin-top:12px;max-width:640px;font-size:15.5px;line-height:1.6;color:var(--mu)}
 #aren .ae-video{position:relative;margin-top:22px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--bd)}
-#aren .ae-video img, #aren .ae-video iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
-#aren .ae-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,15,30,0) 62%,rgba(4,15,30,.75) 100%);pointer-events:none}
-#aren .ae-play{position:absolute;left:18px;bottom:16px;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 16px 0 6px;border-radius:999px;border:0;background:linear-gradient(135deg,var(--aq),var(--aq2));color:#040f1e;font-family:var(--body);font-size:13.5px;font-weight:700;letter-spacing:.4px;cursor:pointer;box-shadow:0 10px 28px rgba(0,0,0,.45)}
-#aren .ae-play-ico{width:32px;height:32px;border-radius:50%;background:#040f1e;color:var(--aq2);display:flex;align-items:center;justify-content:center}
-#aren .ae-play-ico svg{width:13px;height:13px;margin-left:2px}
-#aren .ae-play-time{font-family:var(--mono);font-size:11.5px;opacity:.7}
-#aren .ae-video.is-pending .ae-play{background:rgba(4,15,30,.85);color:var(--sub);border:1px solid rgba(255,255,255,.18);cursor:default}
-#aren .ae-video.is-pending .ae-play-ico{background:rgba(229,179,92,.16);color:#E5B35C}
-#aren .ae-play-live{display:none}
-#aren .ae-video:not(.is-pending) .ae-play-live{display:inline}
-#aren .ae-video:not(.is-pending) .ae-play-soon{display:none}
+#aren .ae-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 #aren .ae-hd{font-family:var(--display);font-weight:400;font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--aq2);margin:26px 0 10px}
 #aren .ae-need{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 #aren .ae-need li{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;background:var(--tile);border:1px solid rgba(0,180,216,.2);border-radius:10px}
@@ -66,7 +56,7 @@
 #aren .ae-band-eyebrow{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;margin-bottom:5px}
 #aren .ae-band-title{font-family:var(--site);font-weight:700;font-size:22px;line-height:1.2;color:var(--site-tx);margin-bottom:6px}
 #aren .ae-band-sub{font-size:13.5px;line-height:1.55;color:var(--sub);max-width:470px}
-#aren .ae-band-ctas{flex:none;display:flex;flex-direction:column;gap:8px;width:250px}
+#aren .ae-band-ctas{flex:none;display:flex;flex-direction:column;gap:8px;width:272px}
 #aren .ae-go{background:linear-gradient(135deg,rgba(34,197,94,.18),rgba(22,163,74,.05));border:1px solid rgba(34,197,94,.55);box-shadow:0 0 0 4px rgba(34,197,94,.08),0 10px 30px rgba(0,0,0,.25)}
 #aren .ae-go .ae-band-eyebrow{color:var(--gr)}
 #aren .ae-direct{background:linear-gradient(135deg,rgba(0,180,216,.15),rgba(72,202,228,.04));border:1px solid var(--bd2)}
@@ -122,8 +112,6 @@
 #aren .ae-creds{gap:8px 18px}
 #aren .ae-card{padding:22px 18px 20px;border-radius:14px}
 #aren .ae-need{grid-template-columns:minmax(0,1fr)}
-#aren .ae-play{left:10px;bottom:10px;height:38px;font-size:12.5px;padding:0 12px 0 4px}
-#aren .ae-play-ico{width:28px;height:28px}
 #aren .ae-band{padding:20px 18px}
 #aren .ae-res{grid-template-columns:minmax(0,1fr)}
 }

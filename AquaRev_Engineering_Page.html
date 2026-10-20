@@ -50,17 +50,7 @@ body{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10
 .ae-card-guide .ae-hd:first-of-type{margin-top:24px}
 .ae-lede{margin-top:12px;max-width:640px;font-size:15.5px;line-height:1.6;color:var(--mu)}
 .ae-video{position:relative;margin-top:22px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--bd)}
-.ae-video img,.ae-video iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
-.ae-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,15,30,0) 62%,rgba(4,15,30,.75) 100%);pointer-events:none}
-.ae-play{position:absolute;left:18px;bottom:16px;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 16px 0 6px;border-radius:999px;border:0;background:linear-gradient(135deg,var(--aq),var(--aq2));color:#040f1e;font-family:var(--body);font-size:13.5px;font-weight:700;letter-spacing:.4px;cursor:pointer;box-shadow:0 10px 28px rgba(0,0,0,.45)}
-.ae-play-ico{width:32px;height:32px;border-radius:50%;background:#040f1e;color:var(--aq2);display:flex;align-items:center;justify-content:center}
-.ae-play-ico svg{width:13px;height:13px;margin-left:2px}
-.ae-play-time{font-family:var(--mono);font-size:11.5px;opacity:.7}
-.ae-video.is-pending .ae-play{background:rgba(4,15,30,.85);color:var(--sub);border:1px solid rgba(255,255,255,.18);cursor:default}
-.ae-video.is-pending .ae-play-ico{background:rgba(229,179,92,.16);color:#E5B35C}
-.ae-play-live{display:none}
-.ae-video:not(.is-pending) .ae-play-live{display:inline}
-.ae-video:not(.is-pending) .ae-play-soon{display:none}
+.ae-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .ae-hd{font-family:var(--display);font-weight:400;font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--aq2);margin:26px 0 10px}
 .ae-need{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .ae-need li{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;background:var(--tile);border:1px solid rgba(0,180,216,.2);border-radius:10px}
@@ -73,7 +63,7 @@ body{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10
 .ae-band-eyebrow{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;margin-bottom:5px}
 .ae-band-title{font-family:var(--site);font-weight:700;font-size:22px;line-height:1.2;color:var(--site-tx);margin-bottom:6px}
 .ae-band-sub{font-size:13.5px;line-height:1.55;color:var(--sub);max-width:470px}
-.ae-band-ctas{flex:none;display:flex;flex-direction:column;gap:8px;width:250px}
+.ae-band-ctas{flex:none;display:flex;flex-direction:column;gap:8px;width:272px}
 .ae-go{background:linear-gradient(135deg,rgba(34,197,94,.18),rgba(22,163,74,.05));border:1px solid rgba(34,197,94,.55);box-shadow:0 0 0 4px rgba(34,197,94,.08),0 10px 30px rgba(0,0,0,.25)}
 .ae-go .ae-band-eyebrow{color:var(--gr)}
 .ae-direct{background:linear-gradient(135deg,rgba(0,180,216,.15),rgba(72,202,228,.04));border:1px solid var(--bd2)}
@@ -129,8 +119,6 @@ body{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10
 .ae-creds{gap:8px 18px}
 .ae-card{padding:22px 18px 20px;border-radius:14px}
 .ae-need{grid-template-columns:minmax(0,1fr)}
-.ae-play{left:10px;bottom:10px;height:38px;font-size:12.5px;padding:0 12px 0 4px}
-.ae-play-ico{width:28px;height:28px}
 .ae-band{padding:20px 18px}
 .ae-res{grid-template-columns:minmax(0,1fr)}
 }
@@ -154,14 +142,9 @@ body{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10
 </header>
 
 <section class="ae-card ae-card-guide" id="ae-guide">
-  <div class="ae-video is-pending" data-video>
-    <img src="img/guide-poster.jpg" alt="Pump Room Specifications Guide for AquaRev Water devices" width="1600" height="900">
-    <div class="ae-video-shade"></div>
-    <button class="ae-play" type="button" data-video-play aria-label="Play the Pump Room Specifications Guide">
-      <span class="ae-play-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span>
-      <span class="ae-play-live">Watch the guide</span><span class="ae-play-soon">Video publishing soon</span>
-      <span class="ae-play-time">4:49</span>
-    </button>
+  <div class="ae-video">
+    <!-- Guide video: YouTube DJ4vA-yBOg8. To change it, replace the id in this src. -->
+    <iframe src="https://www.youtube-nocookie.com/embed/DJ4vA-yBOg8?rel=0&amp;modestbranding=1" title="Pump Room Specification Guide for engineers" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 
   <h2 class="ae-hd">What we need to verify your property&rsquo;s specifications</h2>
@@ -194,7 +177,7 @@ body{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10
   </div>
   <div class="ae-band-ctas">
     <a class="ae-btn ae-btn-aqua" href="https://cdn.prod.website-files.com/691fa5d63fc3a5a75a65efeb/6ad6bd1c3ab5b2b1d428de70_AquaRev_Submission_Guide_1_Pump_Room.pdf" data-guide target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download submission guide</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download Submission Template</a>
     <a class="ae-btn" href="mailto:water@aquarevwater.us" data-mail="summary">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email a summary</a>
     <button class="ae-btn" type="button" data-copy-template>
@@ -254,9 +237,6 @@ body{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10
 (function(){
   var R = document.getElementById('aren') || document.body;
 
-  // ── Guide video. Paste the YouTube id once the video is published.
-  var GUIDE = { youtubeId: 'DJ4vA-yBOg8' };
-
   var MAIL = 'water@aquarevwater.us';
   var ACCESS = {
     subject: 'Engineer Portal access request',
@@ -295,27 +275,7 @@ body{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10
   var a1 = R.querySelector('[data-mail="access"]'); if(a1) a1.href = mailto(ACCESS.subject, ACCESS.body);
   var a2 = R.querySelector('[data-mail="summary"]'); if(a2) a2.href = mailto('Pump room specifications: [property name]', SUMMARY);
 
-  var video = R.querySelector('[data-video]');
-  var live = !!GUIDE.youtubeId;
-  if(live) video.classList.remove('is-pending');
-  else {
-    var pb = R.querySelector('[data-video-play]');
-    if(pb){ pb.setAttribute('aria-disabled', 'true'); pb.setAttribute('aria-label', 'Video publishing soon'); }
-  }
-
-  function playVideo(){
-    if(!live){ toast('The guide is publishing soon. Questions? Call (832) 979-6758.'); return; }
-    if(video.querySelector('iframe')) return;
-    var f = document.createElement('iframe');
-    f.title = 'Pump Room Specifications Guide';
-    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-    f.setAttribute('allowfullscreen', '');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + GUIDE.youtubeId + '?autoplay=1&rel=0&modestbranding=1';
-    video.innerHTML = '';
-    video.appendChild(f);
-  }
   R.addEventListener('click', function(e){
-    if(e.target.closest('[data-video-play]')){ playVideo(); return; }
     if(e.target.closest('[data-copy-template]')){ copyTemplate(); return; }
     var g = e.target.closest('[data-guide]');
     if(g){ e.preventDefault(); openGuide(g); return; }
