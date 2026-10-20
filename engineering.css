@@ -18,7 +18,7 @@
 --body:"DM Sans","Helvetica Neue",Arial,sans-serif;
 --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 }
-#aren{margin:0;background:radial-gradient(1200px 600px at 50% -10%,rgba(0,180,216,.10),transparent 60%),var(--bg);color:var(--sub);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+#aren{margin:0;overflow-x:clip;background:radial-gradient(1200px 600px at 50% -10%,rgba(0,180,216,.10),transparent 60%),var(--bg);color:var(--sub);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
 #aren *, #aren *::before, #aren *::after{box-sizing:border-box}
 #aren :where(.page) :where(h1,h2,h3,p,ol,ul,li){margin:0;padding:0}
 #aren :where(.page) button{font:inherit;color:inherit}
@@ -28,8 +28,24 @@
 #aren .page svg{flex:none}
 #aren .ae-card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:32px 32px 28px}
 #aren .ae-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gr);font-weight:600;margin-bottom:10px}
-#aren .ae-h1{font-family:var(--site);font-weight:700;font-size:clamp(32px,4.6vw,48px);letter-spacing:-.01em;line-height:1.05;color:var(--site-tx)}
-#aren .ae-h1 span{color:var(--site-aq)}
+#aren .ae-hero{position:relative;padding:28px 0 40px;isolation:isolate}
+#aren .ae-hero::before{content:"";position:absolute;z-index:-1;inset:-40px -60px 0;background-image:linear-gradient(rgba(0,180,216,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,.07) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(70% 80% at 30% 40%,#000 0%,transparent 75%);mask-image:radial-gradient(70% 80% at 30% 40%,#000 0%,transparent 75%);pointer-events:none}
+#aren .ae-hero::after{content:"";position:absolute;z-index:-1;top:-80px;left:-120px;width:620px;height:420px;background:radial-gradient(closest-side,rgba(0,217,255,.16),transparent);pointer-events:none}
+#aren .ae-hero-tag{display:inline-flex;align-items:center;gap:9px;padding:6px 13px 6px 9px;border:1px solid rgba(74,222,128,.35);border-radius:999px;background:rgba(34,197,94,.08);font-size:11px;letter-spacing:2.2px;text-transform:uppercase;font-weight:600;color:var(--gr)}
+#aren .ae-hero-tag i{width:7px;height:7px;border-radius:50%;background:var(--gr);box-shadow:0 0 0 4px rgba(74,222,128,.18)}
+#aren .ae-h1{margin-top:20px;font-family:var(--site);font-weight:700;font-size:clamp(38px,6.6vw,64px);letter-spacing:-.015em;line-height:.98;color:var(--site-tx)}
+#aren .ae-h1 span{display:block;color:var(--site-aq)}
+#aren .ae-hero .ae-lede{margin-top:18px;max-width:600px;font-size:17px;line-height:1.6;color:var(--sub)}
+#aren .ae-hero-ctas{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
+#aren .ae-btn.ae-btn-lg{height:52px;padding:0 22px;font-size:15px;border-radius:10px}
+#aren .ae-btn-lg svg{width:16px;height:16px}
+#aren .page a.ae-hero-link{margin-left:6px;font-size:14.5px;font-weight:600;color:var(--aq2);border-bottom:1px solid rgba(72,202,228,.4);padding-bottom:1px}
+#aren .page a.ae-hero-link:hover{color:#fff;border-color:#fff}
+#aren .ae-creds{list-style:none;margin-top:26px;padding-top:18px;border-top:1px solid var(--bd);display:flex;flex-wrap:wrap;gap:10px 26px}
+#aren .ae-creds li{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.2px;color:var(--sub)}
+#aren .ae-creds svg{width:16px;height:16px;color:var(--site-aq)}
+#aren .ae-card-guide .ae-video{margin-top:0}
+#aren .ae-card-guide .ae-hd:first-of-type{margin-top:24px}
 #aren .ae-lede{margin-top:12px;max-width:640px;font-size:15.5px;line-height:1.6;color:var(--mu)}
 #aren .ae-video{position:relative;margin-top:22px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--bd)}
 #aren .ae-video img, #aren .ae-video iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
@@ -106,6 +122,11 @@
 }
 @media (max-width:560px){
 #aren .page{padding:28px 14px 64px}
+#aren .ae-hero{padding:12px 0 28px}
+#aren .ae-hero .ae-lede{font-size:16px}
+#aren .ae-hero-ctas .ae-btn{flex:1 1 100%}
+#aren .page a.ae-hero-link{margin:4px auto 0}
+#aren .ae-creds{gap:8px 18px}
 #aren .ae-card{padding:22px 18px 20px;border-radius:14px}
 #aren .ae-need{grid-template-columns:minmax(0,1fr)}
 #aren .ae-play{left:10px;bottom:10px;height:38px;font-size:12.5px;padding:0 12px 0 4px}
