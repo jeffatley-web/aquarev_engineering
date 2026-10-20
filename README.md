@@ -59,7 +59,7 @@ So when the guide changes:
 
 ## Turning the video on
 
-The guide video is live: `GUIDE.youtubeId` = `979kyf0n1gs` (youtu.be/979kyf0n1gs, 4:49). To change it, set a new id (and the 4:49 label) in the master, rebuild and push. The
+The guide video is live: `GUIDE.youtubeId` = `DJ4vA-yBOg8` (youtu.be/DJ4vA-yBOg8, 4:49). To change it, set a new id (and the 4:49 label) in the master, rebuild and push. The
 button then reads "Watch the guide" and plays the video in place. With no id set, it reads
 "Video publishing soon".
 

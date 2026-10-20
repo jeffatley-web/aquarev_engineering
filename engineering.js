@@ -125,7 +125,7 @@ root.innerHTML=`
   var R = document.getElementById('aren') || document.body;
 
   // ── Guide video. Paste the YouTube id once the video is published.
-  var GUIDE = { youtubeId: '979kyf0n1gs' };
+  var GUIDE = { youtubeId: 'DJ4vA-yBOg8' };
 
   var MAIL = 'water@aquarevwater.us';
   var ACCESS = {
